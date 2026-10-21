@@ -79,7 +79,6 @@ window.OFXViews.home = (() => {
     const statusEl = document.getElementById("filter-status");
     statusEl.innerHTML =
       `<button type="button" class="chip ${!state.status ? "active" : ""}" data-filter="status" data-value="">${I.t("filter.allStatus")}</button>` +
-      `<button type="button" class="chip ${state.status === "unconfirmed" ? "active" : ""}" data-filter="status" data-value="unconfirmed">${I.t("filter.unconfirmed")}</button>` +
       `<button type="button" class="chip ${state.status === "official-supported" ? "active" : ""}" data-filter="status" data-value="official-supported">${I.t("filter.officialSupported")}</button>`;
 
     /* 事件绑定 */
@@ -154,12 +153,11 @@ window.OFXViews.home = (() => {
   function cardHTML(p) {
     const U = window.OFXUtils;
     const supported = (p.compatibility || []).filter((c) => c.officialSupport === "supported");
-    const unconfirmed = (p.compatibility || []).filter((c) => c.officialSupport === "unconfirmed");
     let statusBadge = "";
-    if (unconfirmed.length) statusBadge = U.statusBadge("unconfirmed");
-    else if (supported.length) statusBadge = U.statusBadge("official-supported");
+    if (supported.length) statusBadge = U.statusBadge("official-supported");
 
     const hostsText = (p.compatibility || [])
+      .filter((c) => c.officialSupport !== "unconfirmed")
       .map((c) => (window.HOSTS_DATA ? window.HOSTS_DATA.hosts.find((h) => h.id === c.host) : null))
       .filter(Boolean)
       .map((h) => I.tr(h.name))
@@ -225,7 +223,6 @@ window.OFXViews.home = (() => {
     el.innerHTML = `
       <div class="stat-item"><b>${plugins.length}</b><span>${I.t("stat.plugins")}</span></div>
       <div class="stat-item ok"><b>${hosts.filter((h) => h.ofxSupport === "supported").length}</b><span>${I.t("stat.hosts")}</span></div>
-      <div class="stat-item warn"><b>${unconfirmedCount}</b><span>${I.t("stat.unconfirmed")}</span></div>
       <div class="stat-item info"><b>${plugins.filter((p) => p.license === "free" || p.license === "free-donation").length}</b><span>${I.t("stat.free")}</span></div>`;
   }
 

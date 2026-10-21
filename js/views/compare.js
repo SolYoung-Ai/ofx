@@ -74,9 +74,8 @@ window.OFXViews.compare = (() => {
     const compatCell = (p) => {
       const comps = p.compatibility || [];
       if (!comps.length) return `<span class="unknown">${I.t("compare.untested")}</span>`;
-      return comps.map((c) => {
+      return comps.filter((c) => c.officialSupport !== "unconfirmed").map((c) => {
         const st = c.officialSupport === "supported" ? I.t("compare.officialSupported")
-          : c.officialSupport === "unconfirmed" ? I.t("compare.unconfirmed")
           : c.officialSupport === "not-supported" ? I.t("compare.notSupported")
           : c.officialSupport;
         return `<div>${U.esc(hostName(c.host))}：${U.esc(st)}</div>`;
@@ -120,7 +119,7 @@ window.OFXViews.compare = (() => {
       [I.t("compare.category"), (p) => (p.category || []).map((c) => U.categoryLabel(c)).join(" / ")],
       [I.t("compare.license"), (p) => `${U.licenseLabel(p.license)}（${p.price ? I.tr(p.price) : I.t("compare.unknown")}）`],
       [I.t("compare.platforms"), (p) => (p.platforms || []).map((x) => U.platformLabel(x)).join(" / ")],
-      [I.t("compare.compat"), (p) => (p.compatibility || []).map((c) => `${hostName(c.host)}：${c.officialSupport === "supported" ? I.t("compare.officialSupported") : c.officialSupport === "unconfirmed" ? I.t("compare.unconfirmed") : c.officialSupport}`).join("；")],
+      [I.t("compare.compat"), (p) => (p.compatibility || []).filter((c) => c.officialSupport !== "unconfirmed").map((c) => `${hostName(c.host)}：${c.officialSupport === "supported" ? I.t("compare.officialSupported") : c.officialSupport}`).join("；")],
       [I.t("detail.home"), (p) => p.officialHome || I.t("compare.unknown")],
     ];
     list.forEach((p) => {

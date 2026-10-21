@@ -38,11 +38,12 @@ window.OFXViews.plugin = (() => {
       return h ? `（${U.esc(I.tr(h.name))}）` : "";
     };
 
-    /* 兼容性矩阵 */
-    const matrixRows = (plugin.compatibility || []).map((c) => {
+    /* 兼容性矩阵：隐藏「官方资料未确认」的宿主行 */
+    const matrixRows = (plugin.compatibility || [])
+      .filter((c) => c.officialSupport !== "unconfirmed")
+      .map((c) => {
       let statusTxt = "";
       if (c.officialSupport === "supported") statusTxt = U.statusBadge("official-supported");
-      else if (c.officialSupport === "unconfirmed") statusTxt = U.statusBadge("unconfirmed");
       else if (c.officialSupport === "not-supported") statusTxt = U.statusBadge("not-supported");
       return `
         <tr>
