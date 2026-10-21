@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "siteName": "OFX Atlas",
+  "entries": [
+    {
+      "date": "2026-10-21",
+      "type": "site-launch",
+      "title": "OFX Atlas 站点上线",
+      "summary": "OFX Atlas 正式上线，收录 14 款官网可核验的 OFX 插件，提供搜索、筛选、详情、对比、故障排查、快捷复制面板等工具。",
+      "relatedPluginSlugs": []
+    },
+    {
+      "date": "2026-10-21",
+      "type": "data-added",
+      "title": "初始插件数据收录（14 款）",
+      "summary": "收录 Dehancer Pro、FilmConvert Nitrate、Filmbox Looks、Spektrafilm、Neat Video、RE:Vision Effects、Boris FX Sapphire、Boris FX Continuum、Maxon Red Giant、Video Village Scatter、Nobe OmniScope、Mononodes Look Lab Print、Digital Anarchy Flicker Free、3D LUT Creator（免费 OFX）。全部为官网可核验来源。",
+      "relatedPluginSlugs": [
+        "dehancer-pro",
+        "filmconvert-nitrate",
+        "filmbox-looks",
+        "spektrafilm",
+        "neat-video",
+        "revision-effects",
+        "boris-sapphire",
+        "boris-continuum",
+        "maxon-red-giant",
+        "video-village-scatter",
+        "nobe-omniscope",
+        "mononodes-look-lab",
+        "digital-anarchy-flicker-free",
+        "3d-lut-creator"
+      ]
+    },
+    {
+      "date": "2026-10-21",
+      "type": "verification",
+      "title": "剪映专业版 OFX 宿主能力核验结论",
+      "summary": "经官方资料核验：剪映专业版公开资料中无 OFX 原生加载能力说明，开放平台插件列表为空，暂无公开可复现实测。全站剪映兼容性一律标注为『官方资料尚未确认』，不伪造兼容结果。",
+      "relatedPluginSlugs": []
+    },
+    {
+      "date": "2026-10-21",
+      "type": "verification",
+      "title": "达芬奇免费版不支持第三方 OFX 插件",
+      "summary": "确认 Blackmagic Design 官方限制：DaVinci Resolve 免费版不加载第三方 OFX 插件，需 Studio 版本。已在宿主说明与故障排查向导中标注。",
+      "relatedPluginSlugs": []
+    }
+  ]
+}
