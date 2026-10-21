@@ -1518,6 +1518,410 @@ window.PLUGINS_DATA = {
           "notes": "剪映专业版官方未公开 OFX 宿主能力"
         }
       ]
+    },
+    {
+      "id": "particle-illusion",
+      "slug": "particle-illusion",
+      "name": "Particle Illusion",
+      "developer": "Boris FX",
+      "tagline": " legendary 粒子生成器（OFX 插件版）",
+      "category": [
+        "effects"
+      ],
+      "tags": [
+        "粒子",
+        "光效",
+        "烟雾",
+        "火花",
+        "mocha 跟踪"
+      ],
+      "description": "经典 2D/3D 粒子生成器，预置数百种发射器（烟、火、雪、火花、魔法），可链接 Mocha 平面跟踪数据让粒子贴合运动物体。插件版含 Continuum 订阅内，另有免费 Standalone 版。",
+      "license": "subscription",
+      "price": "含于 Continuum 订阅，或单独购买，价格以官网为准",
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "officialHome": "https://borisfx.com/products/particle-illusion-2022/",
+      "officialDownload": "https://borisfx.com/products/particle-illusion-2022/",
+      "downloadVerified": true,
+      "sources": [
+        "https://borisfx.com/products/particle-illusion-2022/"
+      ],
+      "lastVerified": "2026-10-21",
+      "installationGuide": "通过 Boris FX Hub 安装，OFX 版自动挂载到 Resolve/VEGAS/Nuke 的 OpenFX 面板。",
+      "knownIssues": [
+        "macOS 上 3D Objects 部分功能不可用"
+      ],
+      "compatibility": [
+        {
+          "host": "davinci-resolve",
+          "officialSupport": "supported",
+          "studioOnly": true,
+          "evidenceLevel": "official-docs",
+          "notes": "官网明确列出 DaVinci Resolve (OFX)"
+        },
+        {
+          "host": "vegas-pro",
+          "officialSupport": "supported",
+          "studioOnly": false,
+          "evidenceLevel": "official-docs",
+          "notes": "官网明确列出 VEGAS Pro (OFX)"
+        },
+        {
+          "host": "nuke",
+          "officialSupport": "supported",
+          "studioOnly": false,
+          "evidenceLevel": "official-docs",
+          "notes": "官网明确列出 Nuke (OFX)"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力"
+        }
+      ]
+    },
+    {
+      "id": "prodad-vitascene",
+      "slug": "prodad-vitascene",
+      "name": "proDAD VitaScene OFX",
+      "developer": "proDAD",
+      "tagline": "1972 种滤镜与转场效果库",
+      "category": [
+        "effects",
+        "stylize"
+      ],
+      "tags": [
+        "转场",
+        "滤镜",
+        "光晕",
+        "老电影",
+        "一键预设"
+      ],
+      "description": "德国 proDAD 出品的综合效果库，20 个包共 1972 种效果与转场，全部以 OFX 插件形式挂载，适合快速给素材加电影感、复古、光晕、边缘模糊等风格化处理。",
+      "license": "one-time",
+      "price": "一次性买断，价格以官网为准",
+      "platforms": [
+        "windows"
+      ],
+      "officialHome": "https://www.prodad.com/Videoeffekte-Uebergaenge/Vitascene-OFX-111089,l-de.html",
+      "officialDownload": "https://www.prodad.com/Videoeffekte-Uebergaenge/Vitascene-OFX-111089,l-de.html",
+      "downloadVerified": true,
+      "sources": [
+        "https://www.prodad.com/Videoeffekte-Uebergaenge/Vitascene-OFX-111089,l-de.html"
+      ],
+      "lastVerified": "2026-10-21",
+      "installationGuide": "官网购买后下载 OFX 专用安装包，安装后在 Resolve/VEGAS 的 OpenFX 面板调用。",
+      "knownIssues": [
+        "官方页面为德语，可切换英文；目前主要 Windows 版"
+      ],
+      "compatibility": [
+        {
+          "host": "davinci-resolve",
+          "officialSupport": "supported",
+          "studioOnly": true,
+          "evidenceLevel": "official-docs",
+          "notes": "官网明确列出 DaVinci Resolve 为 OFX 宿主"
+        },
+        {
+          "host": "vegas-pro",
+          "officialSupport": "supported",
+          "studioOnly": false,
+          "evidenceLevel": "official-docs",
+          "notes": "官网明确列出 VEGAS Pro (OFX)"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力"
+        }
+      ]
+    },
+    {
+      "id": "prodad-mercalli",
+      "slug": "prodad-mercalli",
+      "name": "proDAD Mercalli V6 OFX",
+      "developer": "proDAD",
+      "tagline": "AI 视频防抖与 CMOS 校正",
+      "category": [
+        "repair",
+        "effects"
+      ],
+      "tags": [
+        "防抖",
+        "稳定",
+        "CMOS 果冻",
+        "云台",
+        "AI"
+      ],
+      "description": "4 个插件组合：Stabilizr PRO（专业防抖）、CMOS-Fixr PRO（果冻校正）、RT（实时预览）、Picture Enhanzr RT（画面增强）。AI 辅助分析手持、云台、无人机素材。",
+      "license": "one-time",
+      "price": "一次性买断，价格以官网为准",
+      "platforms": [
+        "windows"
+      ],
+      "officialHome": "https://www.prodad.com/Video-Stabilisierung-fuer-Profis/Mercalli-OFX-Plug-Ins--108931,l-de.html",
+      "officialDownload": "https://www.prodad.com/Video-Stabilisierung-fuer-Profis/Mercalli-OFX-Plug-Ins--108931,l-de.html",
+      "downloadVerified": true,
+      "sources": [
+        "https://www.prodad.com/Video-Stabilisierung-fuer-Profis/Mercalli-OFX-Plug-Ins--108931,l-de.html"
+      ],
+      "lastVerified": "2026-10-21",
+      "installationGuide": "官网购买 OFX 版，在 Resolve/VEGAS 的 OpenFX 面板第三方插件目录下调用。",
+      "knownIssues": [
+        "主要 Windows 版"
+      ],
+      "compatibility": [
+        {
+          "host": "davinci-resolve",
+          "officialSupport": "supported",
+          "studioOnly": true,
+          "evidenceLevel": "official-docs",
+          "notes": "官网明确列出 DaVinci Resolve 为 OFX 宿主"
+        },
+        {
+          "host": "vegas-pro",
+          "officialSupport": "supported",
+          "studioOnly": false,
+          "evidenceLevel": "official-docs",
+          "notes": "官网明确列出 VEGAS Pro (OFX)"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力"
+        }
+      ]
+    },
+    {
+      "id": "arri-film-lab",
+      "slug": "arri-film-lab",
+      "name": "ARRI Film Lab",
+      "developer": "RE:Vision Effects（与 ARRI 合作）",
+      "tagline": "ARRI 官方胶片冲印模拟",
+      "category": [
+        "film-emulation",
+        "color-grading"
+      ],
+      "tags": [
+        "ARRI",
+        "胶片模拟",
+        "冲印",
+        "halation",
+        "ACES"
+      ],
+      "description": "由 RE:Vision Effects 与 ARRI 合作开发的官方胶片实验室模拟插件，覆盖 8mm 到 65mm 多格式、变形宽银幕颗粒、halation、ACES 2.0 色彩管理。7 天无水印试用。",
+      "license": "subscription",
+      "price": "订阅制，价格以官网为准",
+      "platforms": [
+        "windows",
+        "macos",
+        "linux"
+      ],
+      "officialHome": "https://revisionfx.com/products/arrifilmlab/",
+      "officialDownload": "https://revisionfx.com/products/arrifilmlab/",
+      "downloadVerified": true,
+      "sources": [
+        "https://revisionfx.com/products/arrifilmlab/"
+      ],
+      "lastVerified": "2026-10-21",
+      "installationGuide": "官网下载 OFX 安装包，在 Resolve/Baselight/Nuke 中调用，7 天无水印试用。",
+      "knownIssues": [
+        "RGB 处理速度比传统流程快 4 倍，对 GPU 有要求"
+      ],
+      "compatibility": [
+        {
+          "host": "davinci-resolve",
+          "officialSupport": "supported",
+          "studioOnly": true,
+          "evidenceLevel": "official-docs",
+          "notes": "官网明确支持 DaVinci Resolve OFX"
+        },
+        {
+          "host": "nuke",
+          "officialSupport": "supported",
+          "studioOnly": false,
+          "evidenceLevel": "official-docs",
+          "notes": "官网列出 Nuke"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力"
+        }
+      ]
+    },
+    {
+      "id": "reframe360",
+      "slug": "reframe360",
+      "name": "Reframe360",
+      "developer": "Reframe360（独立开发者）",
+      "tagline": "免费 360° 全景重新取景 OFX",
+      "category": [
+        "effects"
+      ],
+      "tags": [
+        "360",
+        "全景",
+        "overcapture",
+        "VR",
+        "免费"
+      ],
+      "description": "免费 OFX 插件，在等距柱状 360° 素材上做实时 overcapture 取景，模拟手持相机摇移。Resolve 社区推荐用于 Insta360/大疆 360 素材的二次构图。",
+      "license": "free",
+      "price": "免费",
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "officialHome": "http://reframe360.com/",
+      "officialDownload": "http://reframe360.com/",
+      "downloadVerified": true,
+      "sources": [
+        "http://reframe360.com/"
+      ],
+      "lastVerified": "2026-10-21",
+      "installationGuide": "官网下载 OFX 插件包，安装后在 Resolve OpenFX 面板调用。",
+      "knownIssues": [
+        "缩放倍数有下限，太近会有伪影"
+      ],
+      "compatibility": [
+        {
+          "host": "davinci-resolve",
+          "officialSupport": "supported",
+          "studioOnly": true,
+          "evidenceLevel": "community-report",
+          "notes": "Blackmagic 官方论坛用户实测确认在 Resolve 中工作"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力"
+        }
+      ]
+    },
+    {
+      "id": "opendrt",
+      "slug": "opendrt",
+      "name": "OpenDRT",
+      "developer": "Dec. 18 Studios",
+      "tagline": "开源 Display Rendering Transform",
+      "category": [
+        "color-grading",
+        "scopes"
+      ],
+      "tags": [
+        "开源",
+        "ACES",
+        "display transform",
+        "示波器",
+        "诊断"
+      ],
+      "description": "免费开源的显示转换 OFX 插件，内置 tonescale、示波器诊断，面向 Resolve/Fusion/Nuke 的场景参考工作流。无订阅无水印，开发者 ko-fi 接受捐赠。",
+      "license": "open-source",
+      "price": "免费开源",
+      "platforms": [
+        "windows",
+        "macos",
+        "linux"
+      ],
+      "officialHome": "https://tools.dec18studios.com/color-grading-tools/opendrt/",
+      "officialDownload": "https://tools.dec18studios.com/color-grading-tools/opendrt/",
+      "downloadVerified": true,
+      "sources": [
+        "https://tools.dec18studios.com/color-grading-tools/opendrt/"
+      ],
+      "lastVerified": "2026-10-21",
+      "installationGuide": "官网下载 OFX 插件包，配置到宿主 OpenFX 插件路径。",
+      "knownIssues": [
+        "项目较新，仍在活跃开发"
+      ],
+      "compatibility": [
+        {
+          "host": "davinci-resolve",
+          "officialSupport": "supported",
+          "studioOnly": false,
+          "evidenceLevel": "official-docs",
+          "notes": "官网明确列出 Resolve 为支持宿主"
+        },
+        {
+          "host": "fusion",
+          "officialSupport": "supported",
+          "studioOnly": false,
+          "evidenceLevel": "official-docs",
+          "notes": "官网明确列出 Fusion"
+        },
+        {
+          "host": "nuke",
+          "officialSupport": "supported",
+          "studioOnly": false,
+          "evidenceLevel": "official-docs",
+          "notes": "官网明确列出 Nuke"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力"
+        }
+      ]
+    },
+    {
+      "id": "film-juicer",
+      "slug": "film-juicer",
+      "name": "Film-Juicer",
+      "developer": "oldandangry（社区开源）",
+      "tagline": "Spektrafilm 的 GPLv3 开源移植",
+      "category": [
+        "film-emulation"
+      ],
+      "tags": [
+        "开源",
+        "胶片模拟",
+        "GPLv3",
+        "光谱",
+        "免费"
+      ],
+      "description": "基于 Spektrafilm 的光谱胶片模拟开源移植，模拟从拍摄、冲洗、光学印片到扫描的完整胶片过程。GPLv3 协议，免费。",
+      "license": "open-source",
+      "price": "免费开源（GPLv3）",
+      "platforms": [
+        "windows",
+        "macos",
+        "linux"
+      ],
+      "officialHome": "https://github.com/oldandangry/Film-Juicer",
+      "officialDownload": "https://github.com/oldandangry/Film-Juicer/releases",
+      "downloadVerified": true,
+      "sources": [
+        "https://github.com/oldandangry/Film-Juicer"
+      ],
+      "lastVerified": "2026-10-21",
+      "installationGuide": "GitHub Releases 下载预编译包，配置 OFX 插件路径后在 Resolve 中调用。",
+      "knownIssues": [
+        "社区开源项目，无官方商业支持"
+      ],
+      "compatibility": [
+        {
+          "host": "davinci-resolve",
+          "officialSupport": "supported",
+          "studioOnly": false,
+          "evidenceLevel": "community-report",
+          "notes": "社区报告在 Resolve 中工作"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力"
+        }
+      ]
     }
   ]
 };
