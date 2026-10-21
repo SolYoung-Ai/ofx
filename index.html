@@ -9,26 +9,27 @@
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<a class="skip-link" href="#app-main">跳到主要内容</a>
+<a class="skip-link" href="#app-main" data-i18n="skip.main">跳到主要内容</a>
 
 <header class="site-header" id="site-header">
   <div class="container header-inner">
-    <a class="brand" href="#/" data-nav aria-label="OFX Atlas 首页">
+    <a class="brand" href="#/" data-nav aria-label="OFX Atlas 首页" data-i18n-aria="brand.aria">
       <img class="brand-logo" src="assets/logo.png" alt="OFX Atlas" width="100" height="32">
     </a>
     <nav class="main-nav" aria-label="主导航">
-      <a href="#/" data-nav>插件库</a>
-      <a href="#/compare" data-nav>插件对比</a>
-      <a href="#/troubleshoot" data-nav>故障排查</a>
-      <a href="#/tools" data-nav>快捷复制</a>
-      <a href="#/feedback" data-nav>反馈</a>
-      <a href="#/changelog" data-nav>更新日志</a>
-      <a href="#/about" data-nav>关于</a>
+      <a href="#/" data-nav data-i18n="nav.plugins">插件库</a>
+      <a href="#/compare" data-nav data-i18n="nav.compare">插件对比</a>
+      <a href="#/troubleshoot" data-nav data-i18n="nav.troubleshoot">故障排查</a>
+      <a href="#/tools" data-nav data-i18n="nav.tools">快捷复制</a>
+      <a href="#/feedback" data-nav data-i18n="nav.feedback">反馈</a>
+      <a href="#/changelog" data-nav data-i18n="nav.changelog">更新日志</a>
+      <a href="#/about" data-nav data-i18n="nav.about">关于</a>
     </nav>
     <div class="header-actions">
-      <button id="theme-toggle" class="icon-btn" type="button" aria-label="切换深浅色主题" title="切换主题">
-        <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0-5a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1zM3 11h2a1 1 0 1 1 0 2H3a1 1 0 1 1 0-2zm16 0h2a1 1 0 1 1 0 2h-2a1 1 0 1 1 0-2zM5.6 5.6a1 1 0 0 1 1.4 0l1.4 1.4a1 1 0 1 1-1.4 1.4L5.6 7a1 1 0 0 1 0-1.4zm10.6 10.6a1 1 0 0 1 1.4 0l1.4 1.4a1 1 0 0 1-1.4 1.4l-1.4-1.4a1 1 0 0 1 0-1.4zM18.4 5.6a1 1 0 0 1 0 1.4L17 8.4A1 1 0 1 1 15.6 7l1.4-1.4a1 1 0 0 1 1.4 0zM7.8 16.4a1 1 0 0 1 1.4 0L10.6 17.8a1 1 0 1 1-1.4 1.4L7.8 17.8a1 1 0 0 1 0-1.4z"/></svg>
-        <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <button id="lang-toggle" class="icon-btn lang-btn" type="button" title="切换语言" data-i18n-title="lang.aria" data-i18n-aria="lang.aria">EN</button>
+      <button id="theme-toggle" class="icon-btn" type="button" aria-label="切换深浅色主题" title="切换主题" data-i18n-aria="theme.aria" data-i18n-title="theme.title">
+        <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
       </button>
     </div>
   </div>
@@ -40,81 +41,81 @@
     <!-- ============ 首页 ============ -->
     <section class="page" id="page-home" data-route="home">
       <div class="hero">
-        <div class="hero-badge">OFX 插件兼容性数据库 · 仅做官方导航</div>
-        <h1>找到能用的 OFX 插件，<br>看清它在哪个宿主里真的能跑。</h1>
-        <p class="hero-sub">OFX Atlas 收录官网可核验的 OFX 视频插件，标注宿主兼容性证据等级与实测状态，提供对比、排错与快捷复制工具。本站<strong>不托管、不分发任何插件安装包</strong>，所有下载均跳转官方页面。</p>
+        <div class="hero-badge" data-i18n="hero.badge">OFX 插件兼容性数据库 · 仅做官方导航</div>
+        <h1><span data-i18n="hero.title1">找到能用的 OFX 插件，</span><br><span data-i18n="hero.title2">看清它在哪个宿主里真的能跑。</span></h1>
+        <p class="hero-sub" data-i18n="hero.sub">OFX Atlas 收录官网可核验的 OFX 视频插件，标注宿主兼容性证据等级与实测状态，提供对比、排错与快捷复制工具。本站<strong>不托管、不分发任何插件安装包</strong>，所有下载均跳转官方页面。</p>
         <div class="hero-search">
-          <input type="search" id="home-search" placeholder="搜索插件名称、开发者、标签…（例如：胶片模拟 / Dehancer / 降噪）" aria-label="搜索插件">
-          <button type="button" id="home-search-btn">搜索</button>
+          <input type="search" id="home-search" placeholder="搜索插件名称、开发者、标签…（例如：胶片模拟 / Dehancer / 降噪）" aria-label="搜索插件" data-i18n-placeholder="hero.search.placeholder">
+          <button type="button" id="home-search-btn" data-i18n="hero.search.btn">搜索</button>
         </div>
         <div class="hero-stats" id="hero-stats" aria-live="polite"><!-- 由 JS 填充 --></div>
       </div>
 
       <div class="host-warning" id="host-warning">
-        <strong>重要核验结论：</strong>截至 2026-10-21，剪映专业版官方公开资料中未确认其原生 OFX 宿主能力（开放平台插件列表为空、无公开可复现实测），本站剪映兼容性一律标注为「官方资料尚未确认」。DaVinci Resolve 的第三方 OFX 插件需 <strong>Studio 版</strong>（免费版不加载第三方 OFX）。
+        <strong data-i18n="warn.label">重要核验结论：</strong><span data-i18n="warn.text">截至 2026-10-21，剪映专业版官方公开资料中未确认其原生 OFX 宿主能力（开放平台插件列表为空、无公开可复现实测），本站剪映兼容性一律标注为「官方资料尚未确认」。DaVinci Resolve 的第三方 OFX 插件需 </span><strong data-i18n="warn.studio">Studio 版</strong><span data-i18n="warn.tail">（免费版不加载第三方 OFX）。</span>
       </div>
 
       <div class="filter-bar" id="filter-bar">
         <div class="filter-row">
           <div class="filter-group">
-            <label>宿主</label>
+            <label data-i18n="filter.host">宿主</label>
             <div class="chips" id="filter-host"></div>
           </div>
           <div class="filter-group">
-            <label>分类</label>
+            <label data-i18n="filter.category">分类</label>
             <div class="chips" id="filter-category"></div>
           </div>
         </div>
         <div class="filter-row">
           <div class="filter-group">
-            <label>授权</label>
+            <label data-i18n="filter.license">授权</label>
             <div class="chips" id="filter-license"></div>
           </div>
           <div class="filter-group">
-            <label>系统</label>
+            <label data-i18n="filter.platform">系统</label>
             <div class="chips" id="filter-platform"></div>
           </div>
           <div class="filter-group">
-            <label>兼容状态</label>
+            <label data-i18n="filter.status">兼容状态</label>
             <div class="chips" id="filter-status"></div>
           </div>
         </div>
         <div class="filter-actions">
           <span class="result-count" id="result-count"></span>
-          <button type="button" id="filter-clear" class="btn-ghost">清除全部筛选</button>
+          <button type="button" id="filter-clear" class="btn-ghost" data-i18n="filter.clear">清除全部筛选</button>
           <select id="sort-select" aria-label="排序方式">
-            <option value="recommended">推荐排序</option>
-            <option value="name">名称排序</option>
-            <option value="updated">最近核验</option>
+            <option value="recommended" data-i18n="sort.recommended">推荐排序</option>
+            <option value="name" data-i18n="sort.name">名称排序</option>
+            <option value="updated" data-i18n="sort.updated">最近核验</option>
           </select>
         </div>
       </div>
 
       <div class="plugin-grid" id="plugin-grid" aria-live="polite"><!-- 由 JS 渲染 --></div>
       <div class="empty-state" id="plugin-empty" hidden>
-        <h3>没有找到匹配的插件</h3>
-        <p>试试清除筛选条件，或更换关键词搜索。</p>
-        <button type="button" class="btn-primary" id="empty-reset">清除全部条件</button>
+        <h3 data-i18n="empty.title">没有找到匹配的插件</h3>
+        <p data-i18n="empty.desc">试试清除筛选条件，或更换关键词搜索。</p>
+        <button type="button" class="btn-primary" id="empty-reset" data-i18n="empty.reset">清除全部条件</button>
       </div>
 
       <section class="section-block">
-        <h2 class="section-title">新手入门 · OFX 是什么？</h2>
+        <h2 class="section-title" data-i18n="guide.title">新手入门 · OFX 是什么？</h2>
         <div class="guide-grid">
           <article class="guide-card">
-            <h3>OFX 标准</h3>
-            <p>OpenFX（OFX）是开放的视觉特效插件标准，被达芬奇、Nuke、Fusion、VEGAS Pro 等众多宿主支持。插件可在不同 OFX 宿主间复用。</p>
+            <h3 data-i18n="guide.ofx.title">OFX 标准</h3>
+            <p data-i18n="guide.ofx.body">OpenFX（OFX）是开放的视觉特效插件标准，被达芬奇、Nuke、Fusion、VEGAS Pro 等众多宿主支持。插件可在不同 OFX 宿主间复用。</p>
           </article>
           <article class="guide-card">
-            <h3>宿主 ≠ 插件</h3>
-            <p>「插件采用 OFX 标准」与「某个软件具备 OFX 加载能力」是两件事。判断兼容性要看：宿主是否支持 OFX、插件官方是否声明支持该宿主、以及是否有人实测通过。</p>
+            <h3 data-i18n="guide.host.title">宿主 ≠ 插件</h3>
+            <p data-i18n="guide.host.body">「插件采用 OFX 标准」与「某个软件具备 OFX 加载能力」是两件事。判断兼容性要看：宿主是否支持 OFX、插件官方是否声明支持该宿主、以及是否有人实测通过。</p>
           </article>
           <article class="guide-card">
-            <h3>达芬奇免费版限制</h3>
-            <p>DaVinci Resolve 免费版不加载第三方 OFX 插件，这是 Blackmagic 官方限制，需要 Studio 版才能使用第三方 OFX。</p>
+            <h3 data-i18n="guide.daVinci.title">达芬奇免费版限制</h3>
+            <p data-i18n="guide.daVinci.body">DaVinci Resolve 免费版不加载第三方 OFX 插件，这是 Blackmagic 官方限制，需要 Studio 版才能使用第三方 OFX。</p>
           </article>
           <article class="guide-card">
-            <h3>本站证据等级</h3>
-            <p>每条兼容性记录都标注证据来源：官方文档、厂商声明、社区反馈，或「官方资料尚未确认」。没有证据 ≠ 兼容，本站不会伪造实测结果。</p>
+            <h3 data-i18n="guide.evidence.title">本站证据等级</h3>
+            <p data-i18n="guide.evidence.body">每条兼容性记录都标注证据来源：官方文档、厂商声明、社区反馈，或「官方资料尚未确认」。没有证据 ≠ 兼容，本站不会伪造实测结果。</p>
           </article>
         </div>
       </section>
@@ -122,22 +123,22 @@
 
     <!-- ============ 插件详情 ============ -->
     <section class="page" id="page-plugin" data-route="plugin" hidden>
-      <button type="button" class="btn-ghost back-link" data-nav href="#/">← 返回插件库</button>
+      <button type="button" class="btn-ghost back-link" data-nav href="#/" data-i18n="back.library">← 返回插件库</button>
       <div id="plugin-detail"><!-- 由 JS 渲染 --></div>
     </section>
 
     <!-- ============ 对比工具 ============ -->
     <section class="page" id="page-compare" data-route="compare" hidden>
-      <h1 class="page-title">插件对比</h1>
-      <p class="page-desc">从插件库添加 2–4 款插件进行横向对比。兼容性比较以证据等级为准，缺失信息显示「未知 / 未测试」，不虚构补齐。</p>
+      <h1 class="page-title" data-i18n="compare.title">插件对比</h1>
+      <p class="page-desc" data-i18n="compare.desc">从插件库添加 2–4 款插件进行横向对比。兼容性比较以证据等级为准，缺失信息显示「未知 / 未测试」，不虚构补齐。</p>
       <div class="compare-toolbar">
         <span id="compare-count" class="result-count"></span>
-        <button type="button" id="compare-clear" class="btn-ghost">清空对比</button>
-        <button type="button" id="compare-copy" class="btn-secondary">复制对比结果</button>
+        <button type="button" id="compare-clear" class="btn-ghost" data-i18n="compare.clear">清空对比</button>
+        <button type="button" id="compare-copy" class="btn-secondary" data-i18n="compare.copy">复制对比结果</button>
       </div>
       <div id="compare-empty" class="empty-state">
-        <h3>对比区是空的</h3>
-        <p>回到<a href="#/" data-nav>插件库</a>，在插件卡片上点击「加入对比」。</p>
+        <h3 data-i18n="compare.emptyTitle">对比区是空的</h3>
+        <p><span data-i18n="compare.emptyDescPre">回到</span><a href="#/" data-nav data-i18n="compare.emptyDescLink">插件库</a><span data-i18n="compare.emptyDesc2">，在插件卡片上点击「加入对比」。</span></p>
       </div>
       <div id="compare-table-wrap" hidden>
         <table class="compare-table" id="compare-table"></table>
@@ -146,67 +147,67 @@
 
     <!-- ============ 故障排查 ============ -->
     <section class="page" id="page-troubleshoot" data-route="troubleshoot" hidden>
-      <h1 class="page-title">OFX 故障排查向导</h1>
+      <h1 class="page-title" data-i18n="ts.title">OFX 故障排查向导</h1>
       <p class="page-desc" id="ts-desc"></p>
       <div class="ts-wizard" id="ts-wizard"><!-- 由 JS 渲染 --></div>
     </section>
 
     <!-- ============ 快捷复制面板 ============ -->
     <section class="page" id="page-tools" data-route="tools" hidden>
-      <h1 class="page-title">快捷复制面板</h1>
-      <p class="page-desc">复制常用信息：OFX 插件路径速查、环境信息模板、故障报告模板与核验清单，方便提交给插件开发者或留档。</p>
+      <h1 class="page-title" data-i18n="tools.title">快捷复制面板</h1>
+      <p class="page-desc" data-i18n="tools.desc">复制常用信息：OFX 插件路径速查、环境信息模板、故障报告模板与核验清单，方便提交给插件开发者或留档。</p>
       <div id="tools-panel"><!-- 由 JS 渲染 --></div>
     </section>
 
     <!-- ============ 反馈表单 ============ -->
     <section class="page" id="page-feedback" data-route="feedback" hidden>
-      <h1 class="page-title">反馈与纠错</h1>
-      <p class="page-desc">本站为纯静态站点。提交后表单会在浏览器本地保存草稿，并为你生成可发送的内容（mailto 唤起邮件客户端，收件人：soyoang@outlook.com）。页面会明确区分「已保存草稿」与「已发送给运营者」。</p>
+      <h1 class="page-title" data-i18n="fb.title">反馈与纠错</h1>
+      <p class="page-desc" data-i18n="fb.desc">本站为纯静态站点。提交后表单会在浏览器本地保存草稿，并为你生成可发送的内容（mailto 唤起邮件客户端，收件人：soyoang@outlook.com）。页面会明确区分「已保存草稿」与「已发送给运营者」。</p>
       <form id="feedback-form" class="feedback-form" novalidate>
         <div class="form-field">
-          <label for="fb-type">反馈类型 *</label>
+          <label for="fb-type" data-i18n="fb.type">反馈类型 *</label>
           <select id="fb-type" required>
-            <option value="">请选择</option>
-            <option value="correct">纠正兼容性数据</option>
-            <option value="broken-link">报告失效链接</option>
-            <option value="add-record">补充实测记录</option>
-            <option value="new-plugin">提交新插件建议</option>
-            <option value="bug">报告网站错误</option>
+            <option value="" data-i18n="fb.typePlaceholder">请选择</option>
+            <option value="correct" data-i18n="fb.type.correct">纠正兼容性数据</option>
+            <option value="broken-link" data-i18n="fb.type.broken">报告失效链接</option>
+            <option value="add-record" data-i18n="fb.type.addRecord">补充实测记录</option>
+            <option value="new-plugin" data-i18n="fb.type.newPlugin">提交新插件建议</option>
+            <option value="bug" data-i18n="fb.type.bug">报告网站错误</option>
           </select>
         </div>
         <div class="form-field">
-          <label for="fb-plugin">插件名称</label>
-          <input type="text" id="fb-plugin" list="plugin-list" placeholder="可输入或选择已收录插件">
+          <label for="fb-plugin" data-i18n="fb.plugin">插件名称</label>
+          <input type="text" id="fb-plugin" list="plugin-list" placeholder="可输入或选择已收录插件" data-i18n-placeholder="fb.pluginPh">
           <datalist id="plugin-list"></datalist>
         </div>
         <div class="form-row">
           <div class="form-field">
-            <label for="fb-host">使用的软件</label>
-            <input type="text" id="fb-host" placeholder="如：DaVinci Resolve Studio 19 / 剪映专业版 11.5">
+            <label for="fb-host" data-i18n="fb.host">使用的软件</label>
+            <input type="text" id="fb-host" placeholder="如：DaVinci Resolve Studio 19 / 剪映专业版 11.5" data-i18n-placeholder="fb.hostPh">
           </div>
           <div class="form-field">
-            <label for="fb-os">操作系统</label>
-            <input type="text" id="fb-os" placeholder="如：macOS 15 / Windows 11">
+            <label for="fb-os" data-i18n="fb.os">操作系统</label>
+            <input type="text" id="fb-os" placeholder="如：macOS 15 / Windows 11" data-i18n-placeholder="fb.osPh">
           </div>
         </div>
         <div class="form-field">
-          <label for="fb-detail">问题详情 *</label>
-          <textarea id="fb-detail" rows="5" required placeholder="描述你遇到的问题、复现步骤或要补充的信息…"></textarea>
+          <label for="fb-detail" data-i18n="fb.detail">问题详情 *</label>
+          <textarea id="fb-detail" rows="5" required placeholder="描述你遇到的问题、复现步骤或要补充的信息…" data-i18n-placeholder="fb.detailPh"></textarea>
         </div>
         <div class="form-field">
-          <label for="fb-links">证据链接（官方资料 / 截图 / 文档）</label>
+          <label for="fb-links" data-i18n="fb.links">证据链接（官方资料 / 截图 / 文档）</label>
           <input type="url" id="fb-links" placeholder="https://…">
         </div>
         <div class="form-field">
-          <label for="fb-email">联系邮箱（选填，用于回访）</label>
+          <label for="fb-email" data-i18n="fb.email">联系邮箱（选填，用于回访）</label>
           <input type="email" id="fb-email" placeholder="name@example.com">
         </div>
         <div class="form-errors" id="fb-errors" aria-live="polite"></div>
         <div class="form-actions">
-          <button type="submit" class="btn-primary">校验并生成反馈</button>
-          <button type="button" id="fb-copy" class="btn-secondary">复制反馈内容</button>
-          <button type="button" id="fb-mailto" class="btn-secondary">用邮件客户端发送</button>
-          <button type="button" id="fb-save-draft" class="btn-ghost">保存草稿到本地</button>
+          <button type="submit" class="btn-primary" data-i18n="fb.submit">校验并生成反馈</button>
+          <button type="button" id="fb-copy" class="btn-secondary" data-i18n="fb.copy">复制反馈内容</button>
+          <button type="button" id="fb-mailto" class="btn-secondary" data-i18n="fb.mailto">用邮件客户端发送</button>
+          <button type="button" id="fb-save-draft" class="btn-ghost" data-i18n="fb.saveDraft">保存草稿到本地</button>
         </div>
         <div id="fb-status" class="form-status" aria-live="polite"></div>
       </form>
@@ -214,37 +215,37 @@
 
     <!-- ============ 更新日志 ============ -->
     <section class="page" id="page-changelog" data-route="changelog" hidden>
-      <h1 class="page-title">更新日志</h1>
-      <p class="page-desc">日志来自真实的数据文件变更记录，不自动虚构。</p>
+      <h1 class="page-title" data-i18n="cl.title">更新日志</h1>
+      <p class="page-desc" data-i18n="cl.desc">日志来自真实的数据文件变更记录，不自动虚构。</p>
       <div id="changelog-list"><!-- 由 JS 渲染 --></div>
     </section>
 
     <!-- ============ 关于 / 版权声明 ============ -->
     <section class="page" id="page-about" data-route="about" hidden>
-      <h1 class="page-title">关于本站与版权声明</h1>
+      <h1 class="page-title" data-i18n="about.title">关于本站与版权声明</h1>
       <div class="about-content">
-        <h2>服务定位</h2>
-        <p>OFX Atlas 是一个 OFX 视频插件的信息聚合与兼容性参考站点，旨在帮助视频创作者判断插件能否使用、适合什么环境、如何安装以及遇到问题如何排查。本站是独立的信息导航与工具站，<strong>不提供、不托管、不分发任何插件安装包或二进制文件</strong>。</p>
+        <h2 data-i18n="about.service.title">服务定位</h2>
+        <p data-i18n="about.service.body">OFX Atlas 是一个 OFX 视频插件的信息聚合与兼容性参考站点，旨在帮助视频创作者判断插件能否使用、适合什么环境、如何安装以及遇到问题如何排查。本站是独立的信息导航与工具站，<strong>不提供、不托管、不分发任何插件安装包或二进制文件</strong>。</p>
 
-        <h2>与第三方插件厂商的关系</h2>
-        <p>插件名称、商标、标识及相关知识产权均归属于各插件开发者/厂商。本站与剪映、DaVinci Resolve、各插件厂商之间不存在授权、代言或隶属关系。本站不暗示获得任何厂商的官方授权。</p>
+        <h2 data-i18n="about.vendor.title">与第三方插件厂商的关系</h2>
+        <p data-i18n="about.vendor.body">插件名称、商标、标识及相关知识产权均归属于各插件开发者/厂商。本站与剪映、DaVinci Resolve、各插件厂商之间不存在授权、代言或隶属关系。本站不暗示获得任何厂商的官方授权。</p>
 
-        <h2>下载入口说明</h2>
-        <p>所有「官方下载」按钮均跳转至已核验的插件开发者官方网站、官方产品页或官方发布页面，并在新标签页打开。若官方来源无法核验，按钮会显示「官方来源待核验」并禁用跳转。</p>
+        <h2 data-i18n="about.download.title">下载入口说明</h2>
+        <p data-i18n="about.download.body">所有「官方下载」按钮均跳转至已核验的插件开发者官方网站、官方产品页或官方发布页面，并在新标签页打开。若官方来源无法核验，按钮会显示「官方来源待核验」并禁用跳转。</p>
 
-        <h2>兼容性数据的适用范围与时效性</h2>
-        <p>兼容性记录标注了证据等级（官方文档 / 厂商声明 / 社区反馈 / 官方资料未确认）与核验日期。软件与插件版本会持续变化，记录可能过时，使用前请以插件官网与宿主官方文档为准。没有证据表明不兼容 ≠ 已经兼容。</p>
+        <h2 data-i18n="about.data.title">兼容性数据的适用范围与时效性</h2>
+        <p data-i18n="about.data.body">兼容性记录标注了证据等级（官方文档 / 厂商声明 / 社区反馈 / 官方资料未确认）与核验日期。软件与插件版本会持续变化，记录可能过时，使用前请以插件官网与宿主官方文档为准。没有证据表明不兼容 ≠ 已经兼容。</p>
 
-        <h2>版权与引用</h2>
-        <p>本站优先使用原创图形、文字信息与适当的官方链接呈现插件信息，不复制第三方付费页面的产品图片、宣传文案或品牌资产。</p>
+        <h2 data-i18n="about.copyright.title">版权与引用</h2>
+        <p data-i18n="about.copyright.body">本站优先使用原创图形、文字信息与适当的官方链接呈现插件信息，不复制第三方付费页面的产品图片、宣传文案或品牌资产。</p>
 
-        <h2>纠错与删除请求</h2>
-        <p>如需更正信息、报告失效链接或提出版权异议，请通过<a href="#/feedback" data-nav>反馈表单</a>联系我们，我们会尽快处理。</p>
+        <h2 data-i18n="about.fix.title">纠错与删除请求</h2>
+        <p><span data-i18n="about.fix.bodyPre">如需更正信息、报告失效链接或提出版权异议，请通过</span><a href="#/feedback" data-nav data-i18n="about.fix.link">反馈表单</a><span data-i18n="about.fix.body2">联系我们，我们会尽快处理。</span></p>
 
-        <h2>法律提示</h2>
-        <p>本页为一般性说明，不构成法律意见。商用前请购买正版授权并阅读各厂商的最终用户许可协议（EULA）。</p>
+        <h2 data-i18n="about.legal.title">法律提示</h2>
+        <p data-i18n="about.legal.body">本页为一般性说明，不构成法律意见。商用前请购买正版授权并阅读各厂商的最终用户许可协议（EULA）。</p>
 
-        <h2>数据核验记录</h2>
+        <h2 data-i18n="about.records.title">数据核验记录</h2>
         <ul id="about-verified-list"></ul>
       </div>
     </section>
@@ -255,28 +256,28 @@
 <footer class="site-footer">
   <div class="container footer-inner">
     <div>
-      <img class="footer-logo" src="assets/logo.png" alt="OFX Atlas"> · OFX 插件兼容性数据库与工具站
+      <img class="footer-logo" src="assets/logo.png" alt="OFX Atlas"> · <span data-i18n="footer.text">OFX 插件兼容性数据库与工具站</span>
     </div>
     <div class="footer-links">
-      <a href="#/" data-nav>插件库</a>
-      <a href="#/changelog" data-nav>更新日志</a>
-      <a href="#/about" data-nav>版权声明</a>
-      <a href="#/feedback" data-nav>反馈</a>
+      <a href="#/" data-nav data-i18n="nav.plugins">插件库</a>
+      <a href="#/changelog" data-nav data-i18n="nav.changelog">更新日志</a>
+      <a href="#/about" data-nav data-i18n="nav.about">版权声明</a>
+      <a href="#/feedback" data-nav data-i18n="nav.feedback">反馈</a>
     </div>
     <div class="footer-note">
-      本站仅做官方导航，不托管任何插件安装包；商用请购买正版授权。数据核验日期：<span id="footer-verified"></span>
+      <span data-i18n="footer.note">本站仅做官方导航，不托管任何插件安装包；商用请购买正版授权。数据核验日期：</span><span id="footer-verified"></span>
     </div>
-    <div class="footer-credit">由 <a href="https://solyoung.top/" target="_blank" rel="noopener noreferrer">@SolYoung</a> 构建</div>
+    <div class="footer-credit"><span data-i18n="footer.creditPre">由 </span><a href="https://solyoung.top/" target="_blank" rel="noopener noreferrer">@SolYoung</a> <span data-i18n="footer.credit">构建</span></div>
   </div>
 </footer>
 
 <!-- 浮动对比抽屉 -->
 <div class="compare-drawer" id="compare-drawer" hidden>
   <div class="compare-drawer-head">
-    <span>对比列表（<span id="drawer-count">0</span>/4）</span>
+    <span><span data-i18n="drawer.title.pre">对比列表（</span><span id="drawer-count">0</span><span data-i18n="drawer.title.post">/4）</span></span>
     <div>
-      <button type="button" class="btn-ghost btn-sm" id="drawer-clear">清空</button>
-      <a href="#/compare" data-nav class="btn-secondary btn-sm">去对比 →</a>
+      <button type="button" class="btn-ghost btn-sm" id="drawer-clear" data-i18n="drawer.clear">清空</button>
+      <a href="#/compare" data-nav class="btn-secondary btn-sm" data-i18n="drawer.go">去对比 →</a>
     </div>
   </div>
   <div class="compare-drawer-body" id="drawer-items"></div>
@@ -285,6 +286,7 @@
 <!-- Toast -->
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
+<script src="js/i18n.js"></script>
 <script src="data/plugins.js"></script>
 <script src="data/hosts.js"></script>
 <script src="data/troubleshooting.js"></script>

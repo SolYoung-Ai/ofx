@@ -4,6 +4,7 @@
 window.OFXViews = window.OFXViews || {};
 window.OFXViews.home = (() => {
   const U = window.OFXUtils;
+  const I = window.OFXI18N;
   const state = {
     host: "",
     category: "",
@@ -45,16 +46,16 @@ window.OFXViews.home = (() => {
 
     const hostEl = document.getElementById("filter-host");
     hostEl.innerHTML =
-      `<button type="button" class="chip ${!state.host ? "active" : ""}" data-filter="host" data-value="">全部宿主</button>` +
+      `<button type="button" class="chip ${!state.host ? "active" : ""}" data-filter="host" data-value="">${I.t("filter.allHosts")}</button>` +
       hosts.map((h) =>
-        `<button type="button" class="chip ${state.host === h.id ? "active" : ""}" data-filter="host" data-value="${U.esc(h.id)}">${U.esc(h.name)}</button>`
+        `<button type="button" class="chip ${state.host === h.id ? "active" : ""}" data-filter="host" data-value="${U.esc(h.id)}">${U.esc(I.tr(h.name))}</button>`
       ).join("");
 
     const cats = new Set();
     plugins.forEach((p) => (p.category || []).forEach((c) => cats.add(c)));
     const catEl = document.getElementById("filter-category");
     catEl.innerHTML =
-      `<button type="button" class="chip ${!state.category ? "active" : ""}" data-filter="category" data-value="">全部分类</button>` +
+      `<button type="button" class="chip ${!state.category ? "active" : ""}" data-filter="category" data-value="">${I.t("filter.allCats")}</button>` +
       Array.from(cats).sort().map((c) =>
         `<button type="button" class="chip ${state.category === c ? "active" : ""}" data-filter="category" data-value="${U.esc(c)}">${U.esc(U.categoryLabel(c))}</button>`
       ).join("");
@@ -62,14 +63,14 @@ window.OFXViews.home = (() => {
     const licenseEl = document.getElementById("filter-license");
     const licenseSet = ["free", "free-donation", "one-time", "subscription", "subscription-or-one-time"];
     licenseEl.innerHTML =
-      `<button type="button" class="chip ${!state.license ? "active" : ""}" data-filter="license" data-value="">全部授权</button>` +
+      `<button type="button" class="chip ${!state.license ? "active" : ""}" data-filter="license" data-value="">${I.t("filter.allLicenses")}</button>` +
       licenseSet.map((l) =>
         `<button type="button" class="chip ${state.license === l ? "active" : ""}" data-filter="license" data-value="${l}">${U.esc(U.licenseLabel(l))}</button>`
       ).join("");
 
     const platformEl = document.getElementById("filter-platform");
     platformEl.innerHTML =
-      `<button type="button" class="chip ${!state.platform ? "active" : ""}" data-filter="platform" data-value="">全部系统</button>` +
+      `<button type="button" class="chip ${!state.platform ? "active" : ""}" data-filter="platform" data-value="">${I.t("filter.allPlatforms")}</button>` +
       ["windows", "macos", "linux"].map((p) =>
         `<button type="button" class="chip ${state.platform === p ? "active" : ""}" data-filter="platform" data-value="${p}">${U.esc(U.platformLabel(p))}</button>`
       ).join("");
@@ -77,9 +78,9 @@ window.OFXViews.home = (() => {
     /* 兼容状态：对剪映维度有意义，默认统计「官方资料未确认」等 */
     const statusEl = document.getElementById("filter-status");
     statusEl.innerHTML =
-      `<button type="button" class="chip ${!state.status ? "active" : ""}" data-filter="status" data-value="">全部状态</button>` +
-      `<button type="button" class="chip ${state.status === "unconfirmed" ? "active" : ""}" data-filter="status" data-value="unconfirmed">官方资料未确认</button>` +
-      `<button type="button" class="chip ${state.status === "official-supported" ? "active" : ""}" data-filter="status" data-value="official-supported">官方声明支持</button>`;
+      `<button type="button" class="chip ${!state.status ? "active" : ""}" data-filter="status" data-value="">${I.t("filter.allStatus")}</button>` +
+      `<button type="button" class="chip ${state.status === "unconfirmed" ? "active" : ""}" data-filter="status" data-value="unconfirmed">${I.t("filter.unconfirmed")}</button>` +
+      `<button type="button" class="chip ${state.status === "official-supported" ? "active" : ""}" data-filter="status" data-value="official-supported">${I.t("filter.officialSupported")}</button>`;
 
     /* 事件绑定 */
     document.querySelectorAll(".chips .chip").forEach((chip) => {
@@ -161,34 +162,34 @@ window.OFXViews.home = (() => {
     const hostsText = (p.compatibility || [])
       .map((c) => (window.HOSTS_DATA ? window.HOSTS_DATA.hosts.find((h) => h.id === c.host) : null))
       .filter(Boolean)
-      .map((h) => h.name)
+      .map((h) => I.tr(h.name))
       .slice(0, 2)
       .join(" · ");
 
     const downloadBtn = p.downloadVerified && p.officialDownload
-      ? U.safeExternal(p.officialDownload, "官方下载", "btn-official")
-      : `<span class="badge badge-neutral">官方来源待核验</span>`;
+      ? U.safeExternal(p.officialDownload, I.t("card.download"), "btn-official")
+      : `<span class="badge badge-neutral">${I.t("card.unverified")}</span>`;
 
     return `
       <article class="plugin-card">
         <div class="pc-head">
           <div>
             <h3 class="pc-name"><a href="#/plugin/${encodeURIComponent(p.slug)}" data-nav>${U.esc(p.name)}</a></h3>
-            <div class="pc-developer">${U.esc(p.developer)}</div>
+            <div class="pc-developer">${U.esc(I.tr(p.developer))}</div>
           </div>
           ${statusBadge}
         </div>
-        <p class="pc-tagline">${U.esc(p.tagline)}</p>
-        <div class="pc-tags">${(p.tags || []).slice(0, 4).map((t) => `<span class="pc-tag">${U.esc(t)}</span>`).join("")}</div>
+        <p class="pc-tagline">${U.esc(I.tr(p.tagline))}</p>
+        <div class="pc-tags">${(p.tags || []).slice(0, 4).map((t) => `<span class="pc-tag">${U.esc(I.tr(t))}</span>`).join("")}</div>
         <div class="pc-meta">
           <span class="badge badge-neutral">${U.esc(U.licenseLabel(p.license))}</span>
           ${(p.platforms || []).map((pl) => `<span class="badge badge-neutral">${U.esc(U.platformLabel(pl))}</span>`).join("")}
           ${hostsText ? `<span class="badge badge-info">${U.esc(hostsText)}</span>` : ""}
         </div>
         <div class="pc-footer">
-          <span class="pc-price">${U.esc(p.price || "")}</span>
+          <span class="pc-price">${U.esc(p.price ? I.tr(p.price) : "")}</span>
           <div style="display:flex;gap:6px;align-items:center">
-            <button type="button" class="btn-ghost btn-sm add-compare" data-slug="${U.esc(p.slug)}">加入对比</button>
+            <button type="button" class="btn-ghost btn-sm add-compare" data-slug="${U.esc(p.slug)}">${I.t("detail.compare")}</button>
             ${downloadBtn}
           </div>
         </div>
@@ -201,7 +202,7 @@ window.OFXViews.home = (() => {
     const empty = document.getElementById("plugin-empty");
     const count = document.getElementById("result-count");
 
-    count.textContent = `共 ${list.length} 款插件`;
+    count.textContent = I.t("filter.count").replace("{n}", list.length);
     if (list.length === 0) {
       grid.innerHTML = "";
       empty.hidden = false;
@@ -222,10 +223,10 @@ window.OFXViews.home = (() => {
     ).length;
 
     el.innerHTML = `
-      <div class="stat-item"><b>${plugins.length}</b><span>已收录插件</span></div>
-      <div class="stat-item ok"><b>${hosts.filter((h) => h.ofxSupport === "supported").length}</b><span>官方确认 OFX 宿主</span></div>
-      <div class="stat-item warn"><b>${unconfirmedCount}</b><span>条记录：官方资料未确认</span></div>
-      <div class="stat-item info"><b>${plugins.filter((p) => p.license === "free" || p.license === "free-donation").length}</b><span>免费 / 捐赠制插件</span></div>`;
+      <div class="stat-item"><b>${plugins.length}</b><span>${I.t("stat.plugins")}</span></div>
+      <div class="stat-item ok"><b>${hosts.filter((h) => h.ofxSupport === "supported").length}</b><span>${I.t("stat.hosts")}</span></div>
+      <div class="stat-item warn"><b>${unconfirmedCount}</b><span>${I.t("stat.unconfirmed")}</span></div>
+      <div class="stat-item info"><b>${plugins.filter((p) => p.license === "free" || p.license === "free-donation").length}</b><span>${I.t("stat.free")}</span></div>`;
   }
 
   /* ---------- 视图入口 ---------- */

@@ -98,5 +98,5 @@ window.OFXRouter = (() => {
     render(parseHash());
   }
 
-  return { start, navigate, current: () => current, parse: parseHash };
+  return { start, navigate, current: () => current, parse: parseHash, render };
 })();

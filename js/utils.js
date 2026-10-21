@@ -1,7 +1,9 @@
 /* ============================================================
-   utils.js · 通用工具函数
+   utils.js · 通用工具函数（支持中英双语）
    ============================================================ */
 window.OFXUtils = (() => {
+  const I = window.OFXI18N;
+
   /** HTML 转义，防止注入 */
   function esc(str) {
     return String(str == null ? "" : str)
@@ -14,29 +16,31 @@ window.OFXUtils = (() => {
 
   /** 状态 → 徽章 */
   const STATUS_MAP = {
-    confirmed: { label: "实测通过", cls: "badge-ok" },
-    partial: { label: "部分可用", cls: "badge-warn" },
-    failed: { label: "实测失败", cls: "badge-bad" },
-    "official-supported": { label: "官方声明支持", cls: "badge-ok" },
-    unconfirmed: { label: "官方资料未确认", cls: "badge-neutral" },
-    "not-supported": { label: "官方确认不支持", cls: "badge-bad" },
-    "user-report": { label: "用户反馈待复核", cls: "badge-info" },
+    confirmed: { key: "status.confirmed", cls: "badge-ok" },
+    partial: { key: "status.partial", cls: "badge-warn" },
+    failed: { key: "status.failed", cls: "badge-bad" },
+    "official-supported": { key: "status.officialSupported", cls: "badge-ok" },
+    unconfirmed: { key: "status.unconfirmed", cls: "badge-neutral" },
+    "not-supported": { key: "status.notSupported", cls: "badge-bad" },
+    "user-report": { key: "status.userReport", cls: "badge-info" },
   };
   function statusBadge(status) {
-    const m = STATUS_MAP[status] || { label: status, cls: "badge-neutral" };
-    return `<span class="badge ${m.cls}">${esc(m.label)}</span>`;
+    const m = STATUS_MAP[status] || { key: null, cls: "badge-neutral" };
+    const label = m.key ? I.t(m.key) : status;
+    return `<span class="badge ${m.cls}">${esc(label)}</span>`;
   }
 
   /** 证据等级 → 文字 */
   const EVIDENCE_MAP = {
-    "official-docs": "官方文档 / 官网声明",
-    "vendor-statement": "厂商发布页声明",
-    "community-report": "社区实测反馈（待复核）",
-    "self-tested": "本站独立实测",
-    "no-official-info": "官方资料尚未确认",
+    "official-docs": "evidence.officialDocs",
+    "vendor-statement": "evidence.vendorStatement",
+    "community-report": "evidence.communityReport",
+    "self-tested": "evidence.selfTested",
+    "no-official-info": "evidence.noOfficialInfo",
   };
   function evidenceLabel(code) {
-    return EVIDENCE_MAP[code] || code || "未知";
+    const key = EVIDENCE_MAP[code];
+    return key ? I.t(key) : (code || I.t("common.unknown"));
   }
 
   /** 复制文本：优先 Clipboard API，失败回退 execCommand，再失败提示手动复制 */
@@ -102,32 +106,39 @@ window.OFXUtils = (() => {
 
   /** 授权类型映射 */
   const LICENSE_LABELS = {
-    "free": "免费",
-    "free-donation": "免费（捐赠制）",
-    "one-time": "一次性买断",
-    "subscription": "订阅制",
-    "subscription-or-one-time": "订阅 / 买断",
+    "free": "license.free",
+    "free-donation": "license.freeDonation",
+    "one-time": "license.oneTime",
+    "subscription": "license.subscription",
+    "subscription-or-one-time": "license.subOrOneTime",
   };
   function licenseLabel(code) {
-    return LICENSE_LABELS[code] || code;
+    const key = LICENSE_LABELS[code];
+    return key ? I.t(key) : code;
   }
 
   /** 分类映射（用于筛选与卡片） */
   const CATEGORY_LABELS = {
-    "film-emulation": "胶片模拟",
-    "color-grading": "调色",
-    "noise-reduction": "降噪",
-    "repair": "修复增强",
-    "effects": "特效",
-    "stylize": "风格化",
-    "diffusion": "柔光扩散",
-    "scopes": "示波监看",
-    "monitoring": "监看",
-    "retime": "变速",
-    "free": "免费",
+    "film-emulation": "cat.filmEmulation",
+    "color-grading": "cat.colorGrading",
+    "noise-reduction": "cat.noiseReduction",
+    "repair": "cat.repair",
+    "effects": "cat.effects",
+    "stylize": "cat.stylize",
+    "diffusion": "cat.diffusion",
+    "scopes": "cat.scopes",
+    "monitoring": "cat.monitoring",
+    "retime": "cat.retime",
+    "free": "cat.free",
   };
   function categoryLabel(code) {
-    return CATEGORY_LABELS[code] || code;
+    const key = CATEGORY_LABELS[code];
+    return key ? I.t(key) : code;
+  }
+
+  /** 数据文本翻译（英文模式转换，找不到返回原文） */
+  function tr(text) {
+    return I.tr(text);
   }
 
   return {
@@ -141,5 +152,6 @@ window.OFXUtils = (() => {
     platformLabel,
     licenseLabel,
     categoryLabel,
+    tr,
   };
 })();

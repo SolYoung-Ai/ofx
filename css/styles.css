@@ -26,6 +26,10 @@
   --shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
   --font-mono: "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
   --transition: 0.18s ease;
+  /* logo 卡片（随主题变化） */
+  --logo-bg: #f0f1f4;
+  --logo-border: #2f3d4d;
+  --logo-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
 }
 
 [data-theme="light"] {
@@ -46,6 +50,10 @@
   --bad: #c03a30;
   --info: #1f6fae;
   --shadow: 0 4px 18px rgba(20, 30, 45, 0.08);
+  /* logo 卡片（浅色主题：浅边框 + 轻阴影） */
+  --logo-bg: #ffffff;
+  --logo-border: #c3ccd8;
+  --logo-shadow: 0 1px 2px rgba(20, 30, 45, 0.1);
 }
 
 * { box-sizing: border-box; }
@@ -92,13 +100,18 @@ h1, h2, h3, h4 { line-height: 1.3; margin-top: 0; }
 .brand:hover { text-decoration: none; color: var(--text); }
 .brand-logo {
   display: block; height: 32px; width: auto;
-  border-radius: 8px; background: #f4f5f8;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.28), inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  background: var(--logo-bg);
+  border: 1px solid var(--logo-border);
+  box-shadow: var(--logo-shadow);
+  transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
 }
 .footer-logo {
   display: inline-block; height: 22px; width: auto;
   vertical-align: middle; border-radius: 5px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--logo-border);
+  box-shadow: var(--logo-shadow);
+  transition: border-color var(--transition), box-shadow var(--transition);
 }
 .main-nav { display: flex; gap: 4px; margin-left: 12px; flex-wrap: wrap; }
 .main-nav a {
@@ -115,6 +128,10 @@ h1, h2, h3, h4 { line-height: 1.3; margin-top: 0; }
   display: inline-flex; align-items: center; justify-content: center;
 }
 .icon-btn:hover { color: var(--text); border-color: var(--border-strong); }
+.lang-btn {
+  font-size: 13px; font-weight: 600; letter-spacing: 0.3px;
+  min-width: 42px; padding: 0 8px;
+}
 .icon-moon { display: none; }
 [data-theme="light"] .icon-sun { display: none; }
 [data-theme="light"] .icon-moon { display: block; }

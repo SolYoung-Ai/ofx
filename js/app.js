@@ -7,24 +7,37 @@
   const U = window.OFXUtils;
   const Store = window.OFXStore;
   const Router = window.OFXRouter;
+  const I18N = window.OFXI18N;
 
   function initTheme() {
     Store.setTheme(Store.getTheme());
     document.getElementById("theme-toggle").addEventListener("click", () => {
       const next = Store.getTheme() === "dark" ? "light" : "dark";
       Store.setTheme(next);
-      U.toast(next === "dark" ? "已切换为深色主题" : "已切换为浅色主题");
+      U.toast(next === "dark" ? I18N.t("toast.themeDark") : I18N.t("toast.themeLight"));
     });
+  }
+
+  function initLang() {
+    const btn = document.getElementById("lang-toggle");
+    if (btn) {
+      btn.addEventListener("click", () => {
+        I18N.toggle();
+        U.toast(I18N.lang === "en" ? "Switched to English" : "已切换为中文");
+      });
+    }
+    I18N.applyStatic();
   }
 
   function initFooter() {
     const verified =
       (window.PLUGINS_DATA && window.PLUGINS_DATA.lastVerified) || "";
-    document.getElementById("footer-verified").textContent = verified || "未知";
+    document.getElementById("footer-verified").textContent = verified || I18N.t("common.unknown");
   }
 
   function init() {
     initTheme();
+    initLang();
     initFooter();
 
     /* 视图注册 */
