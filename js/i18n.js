@@ -273,6 +273,7 @@ window.OFXI18N = (() => {
     "footer.note": { zh: "本站仅做官方导航，不托管任何插件安装包；商用请购买正版授权。数据核验日期：", en: "Official links only — no plugin installers hosted; buy proper licenses for commercial use. Data verified: " },
     "footer.credit": { zh: "构建", en: "built" },
     "footer.creditPre": { zh: "由 ", en: "Built by " },
+    "footer.solhub": { zh: "SolHub 数字工具社区", en: "SolHub Digital Tools Hub" },
 
     /* 通用 toast 与提示 */
     "toast.themeDark": { zh: "已切换为深色主题", en: "Dark theme enabled" },
