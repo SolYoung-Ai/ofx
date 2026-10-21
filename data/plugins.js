@@ -818,6 +818,706 @@ window.PLUGINS_DATA = {
           "notes": "剪映专业版官方未公开 OFX 宿主能力，暂无可复现的原生兼容实测"
         }
       ]
+    },
+    {
+      "id": "mocha-pro",
+      "slug": "mocha-pro",
+      "name": "Mocha Pro",
+      "developer": "Boris FX",
+      "tagline": "获奖级平面跟踪与 VFX 抠像插件",
+      "category": [
+        "effects",
+        "repair"
+      ],
+      "tags": [
+        "平面跟踪",
+        "roto",
+        "抠像",
+        "物体移除",
+        "稳定"
+      ],
+      "description": "学院奖获奖的平面跟踪与 roto 工具，作为 OFX 插件可直接在 Nuke、Fusion、VEGAS、Flame 等宿主内调用。支持 PowerMesh 变形跟踪、物体移除、镜头稳定与镜头畸变估算，跟踪数据可回写宿主时间线。",
+      "license": "subscription",
+      "price": "订阅制，价格以官网为准",
+      "platforms": [
+        "windows",
+        "macos",
+        "linux"
+      ],
+      "officialHome": "https://borisfx.com/products/mocha-pro/",
+      "officialDownload": "https://borisfx.com/mocha-pro-trial/",
+      "downloadVerified": true,
+      "sources": [
+        "https://borisfx.com/products/mocha-pro/"
+      ],
+      "lastVerified": "2026-10-21",
+      "installationGuide": "通过 Boris FX Hub 下载并安装，登录 Boris FX 账号后请求试用或激活订阅。OFX 版安装后在 Nuke/Fusion/VEGAS 的 OpenFX 面板中调用。",
+      "knownIssues": [
+        "免费试用带水印，激活后去除"
+      ],
+      "compatibility": [
+        {
+          "host": "nuke",
+          "officialSupport": "supported",
+          "studioOnly": false,
+          "evidenceLevel": "official-docs",
+          "notes": "官网明确列出 Foundry Nuke (OFX) 为支持宿主"
+        },
+        {
+          "host": "fusion",
+          "officialSupport": "supported",
+          "studioOnly": false,
+          "evidenceLevel": "official-docs",
+          "notes": "官网明确列出 Blackmagic Fusion (OFX)"
+        },
+        {
+          "host": "vegas-pro",
+          "officialSupport": "supported",
+          "studioOnly": false,
+          "evidenceLevel": "official-docs",
+          "notes": "官网明确列出 VEGAS Pro (OFX)"
+        },
+        {
+          "host": "davinci-resolve",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "Mocha 独立版可链接 Resolve，但 OFX 插件版官网宿主列表未明确列 Resolve，待核验"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力"
+        }
+      ]
+    },
+    {
+      "id": "boris-silhouette",
+      "slug": "boris-silhouette",
+      "name": "Silhouette",
+      "developer": "Boris FX",
+      "tagline": "行业标准级 rotoscoping 与节点式合成",
+      "category": [
+        "effects",
+        "repair"
+      ],
+      "tags": [
+        "roto",
+        "paint",
+        "节点合成",
+        "keying",
+        "morphing"
+      ],
+      "description": "行业标准的 roto 与 Paint 工具，400+ 节点集成平面跟踪、抠像、遮罩、变形与 morphing，内置 Sapphire、Mocha Pro 与 Particle Illusion。可作为 OFX 插件在 Nuke/Fusion/Resolve/VEGAS/Flame 内调用。",
+      "license": "subscription",
+      "price": "订阅制，价格以官网为准",
+      "platforms": [
+        "windows",
+        "macos",
+        "linux"
+      ],
+      "officialHome": "https://borisfx.com/products/silhouette",
+      "officialDownload": "https://borisfx.com/products/silhouette",
+      "downloadVerified": true,
+      "sources": [
+        "https://borisfx.com/products/silhouette"
+      ],
+      "lastVerified": "2026-10-21",
+      "installationGuide": "Boris FX Hub 下载安装，插件版随 Standalone 授权附赠，亦可单独购买 Multi-Host Plugin 选项。",
+      "knownIssues": [
+        "插件版功能完整，但部分高级批处理仍需 Standalone 版"
+      ],
+      "compatibility": [
+        {
+          "host": "davinci-resolve",
+          "officialSupport": "supported",
+          "studioOnly": true,
+          "evidenceLevel": "official-docs",
+          "notes": "官网列出 Resolve 为 OFX 插件宿主之一"
+        },
+        {
+          "host": "nuke",
+          "officialSupport": "supported",
+          "studioOnly": false,
+          "evidenceLevel": "official-docs",
+          "notes": "官网列出 Nuke (OFX)"
+        },
+        {
+          "host": "fusion",
+          "officialSupport": "supported",
+          "studioOnly": false,
+          "evidenceLevel": "official-docs",
+          "notes": "官网列出 Fusion (OFX)"
+        },
+        {
+          "host": "vegas-pro",
+          "officialSupport": "supported",
+          "studioOnly": false,
+          "evidenceLevel": "official-docs",
+          "notes": "官网列出 VEGAS Pro (OFX)"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力"
+        }
+      ]
+    },
+    {
+      "id": "frischluft-lenscare",
+      "slug": "frischluft-lenscare",
+      "name": "Frischluft Lenscare (OFX)",
+      "developer": "Frischluft",
+      "tagline": "基于 Z 深度的物理景深与虚焦",
+      "category": [
+        "diffusion",
+        "effects"
+      ],
+      "tags": [
+        "景深",
+        "虚焦",
+        "镜头散景",
+        "Z 深度"
+      ],
+      "description": "经典景深插件，使用 Z 通道或自动景深估算生成物理准确的镜头散景与离焦效果，比宿主自带模糊更接近真实光学。单开发者小工作室作品，长期维护稳定。",
+      "license": "one-time",
+      "price": "$239（OpenFX 版，含税另计）",
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "officialHome": "https://www.frischluft.com/lenscare/",
+      "officialDownload": "https://www.frischluft.com/order/index.php",
+      "downloadVerified": true,
+      "sources": [
+        "https://www.frischluft.com/lenscare/",
+        "https://www.frischluft.com/order/index.php"
+      ],
+      "lastVerified": "2026-10-21",
+      "installationGuide": "官网订单页通过 Toolfarm 购买后下载 OFX 安装包，支持 Nuke/Fusion 等 OFX 宿主。",
+      "knownIssues": [
+        "官方订单页较朴素，通过 Toolfarm 完成支付"
+      ],
+      "compatibility": [
+        {
+          "host": "nuke",
+          "officialSupport": "supported",
+          "studioOnly": false,
+          "evidenceLevel": "vendor-statement",
+          "notes": "官网订单页明确列出 OpenFX 版（$239）"
+        },
+        {
+          "host": "fusion",
+          "officialSupport": "supported",
+          "studioOnly": false,
+          "evidenceLevel": "community-report",
+          "notes": "OFX 兼容宿主列表含 Digital Fusion"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力"
+        }
+      ]
+    },
+    {
+      "id": "frischluft-flair",
+      "slug": "frischluft-flair",
+      "name": "Frischluft Flair (OFX)",
+      "developer": "Frischluft",
+      "tagline": "高质感 Glow、光 streak 与 sparkle",
+      "category": [
+        "effects",
+        "diffusion"
+      ],
+      "tags": [
+        "辉光",
+        "glow",
+        "光效",
+        "高光"
+      ],
+      "description": "提供 8 种高品质光效：Glow（4 种算法）、Highlight（高光 streak）、Sparkle 等。比一般 glow 插件高光衰减更自然，常用于广告 MV 的镜头光晕。",
+      "license": "one-time",
+      "price": "价格以官网订单页为准",
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "officialHome": "https://www.frischluft.com/flair/",
+      "officialDownload": "https://www.frischluft.com/order/index.php",
+      "downloadVerified": true,
+      "sources": [
+        "https://www.frischluft.com/flair/"
+      ],
+      "lastVerified": "2026-10-21",
+      "installationGuide": "官网订单页购买后下载 OFX 版安装包，与 Lenscare 共用同一套授权体系。",
+      "knownIssues": [],
+      "compatibility": [
+        {
+          "host": "nuke",
+          "officialSupport": "supported",
+          "studioOnly": false,
+          "evidenceLevel": "vendor-statement",
+          "notes": "OFX 兼容宿主含 Nuke"
+        },
+        {
+          "host": "fusion",
+          "officialSupport": "supported",
+          "studioOnly": false,
+          "evidenceLevel": "community-report",
+          "notes": "OFX 兼容宿主含 Digital Fusion"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力"
+        }
+      ]
+    },
+    {
+      "id": "beauty-box-video",
+      "slug": "beauty-box-video",
+      "name": "Beauty Box Video",
+      "developer": "Digital Anarchy",
+      "tagline": "自动人脸检测磨皮与数字化妆",
+      "category": [
+        "repair"
+      ],
+      "tags": [
+        "磨皮",
+        "人脸",
+        "皮肤",
+        "美白",
+        "美颜"
+      ],
+      "description": "自动识别人脸肤色生成遮罩，仅在皮肤区域做平滑与油光消减，保留五官与细节。OFX 版原生支持 DaVinci Resolve 与 Nuke，v6.5 新增牙齿与眼白美白。",
+      "license": "subscription",
+      "price": "约 $89/宿主授权（以官网为准）",
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "officialHome": "https://digitalanarchy.com/beauty-box-video/",
+      "officialDownload": "https://digitalanarchy.com/downloads/davinci-resolve-ofx-beauty-box-video/",
+      "downloadVerified": true,
+      "sources": [
+        "https://digitalanarchy.com/beauty-box-video/",
+        "https://digitalanarchy.com/downloads/davinci-resolve-ofx-beauty-box-video/"
+      ],
+      "lastVerified": "2026-10-21",
+      "installationGuide": "官网下载 DaVinci Resolve OFX 安装包（v6.5），关闭所有宿主后运行安装，在 OpenFX 面板的 Digital Anarchy 分类下调用。",
+      "knownIssues": [
+        "每个宿主平台需单独授权，跨宿主需补差价"
+      ],
+      "compatibility": [
+        {
+          "host": "davinci-resolve",
+          "officialSupport": "supported",
+          "studioOnly": true,
+          "evidenceLevel": "official-docs",
+          "notes": "官网提供 DaVinci Resolve OFX 独立安装包，兼容 Apple Silicon"
+        },
+        {
+          "host": "nuke",
+          "officialSupport": "supported",
+          "studioOnly": false,
+          "evidenceLevel": "official-docs",
+          "notes": "官方 OFX 构建覆盖 DaVinci Resolve 与 Nuke"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力"
+        }
+      ]
+    },
+    {
+      "id": "pixeltools-film-emulsion",
+      "slug": "pixeltools-film-emulsion",
+      "name": "PixelTools Film/Emulsion",
+      "developer": "PixelTools",
+      "tagline": "光化学级真实胶片模拟（OFX + DCTL）",
+      "category": [
+        "film-emulation",
+        "color-grading"
+      ],
+      "tags": [
+        "胶片模拟",
+        "颗粒",
+        "密度",
+        "色彩管理"
+      ],
+      "description": "基于真实光化学过程建模的胶片模拟插件，提供 OFX 与 DCTL 双版本。与 Deheader/ FilmConvert 不同的是它不烤 LUT，节点式可调密度、颗粒与高光滚降。",
+      "license": "one-time",
+      "price": "一次性买断，价格以官网为准",
+      "platforms": [
+        "windows",
+        "macos",
+        "linux"
+      ],
+      "officialHome": "https://pixeltoolspost.com/products/film-emulsion",
+      "officialDownload": "https://pixeltoolspost.com/products/film-emulsion",
+      "downloadVerified": true,
+      "sources": [
+        "https://pixeltoolspost.com/products/film-emulsion"
+      ],
+      "lastVerified": "2026-10-21",
+      "installationGuide": "官网购买后下载 OFX Beta 版（同时支持 Resolve 免费版与 Studio），在 OpenFX 面板调用。",
+      "knownIssues": [
+        "OFX 版为 Beta，DCTL 版需 Resolve Studio"
+      ],
+      "compatibility": [
+        {
+          "host": "davinci-resolve",
+          "officialSupport": "supported",
+          "studioOnly": false,
+          "evidenceLevel": "official-docs",
+          "notes": "OFX Beta 版在 Resolve 免费版与 Studio 均可运行"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力"
+        }
+      ]
+    },
+    {
+      "id": "pixeltools-prime-grade",
+      "slug": "pixeltools-prime-grade",
+      "name": "PixelTools Prime/Grade",
+      "developer": "PixelTools",
+      "tagline": "一级校色三节点合一",
+      "category": [
+        "color-grading"
+      ],
+      "tags": [
+        "一级校色",
+        "白平衡",
+        "示波器",
+        "皮肤色"
+      ],
+      "description": "把一级校色中常用的曝光、白平衡、肤色监视、矢量示波器整合到一个节点，替代传统 Resolve 三节点工作流，带 DWG 色彩空间 Rec.709 校正与皮肤色检查器。",
+      "license": "one-time",
+      "price": "一次性买断，价格以官网为准",
+      "platforms": [
+        "windows",
+        "macos",
+        "linux"
+      ],
+      "officialHome": "https://pixeltoolspost.com/",
+      "officialDownload": "https://pixeltoolspost.com/",
+      "downloadVerified": true,
+      "sources": [
+        "https://pixeltoolspost.com/"
+      ],
+      "lastVerified": "2026-10-21",
+      "installationGuide": "官网购买后下载 OFX 版，在 Resolve OpenFX 面板调用。",
+      "knownIssues": [
+        "OFX 版为 Beta"
+      ],
+      "compatibility": [
+        {
+          "host": "davinci-resolve",
+          "officialSupport": "supported",
+          "studioOnly": false,
+          "evidenceLevel": "official-docs",
+          "notes": "OFX Beta 版在 Resolve 免费版与 Studio 均可运行"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力"
+        }
+      ]
+    },
+    {
+      "id": "pixeltools-phosphor",
+      "slug": "pixeltools-phosphor",
+      "name": "PixelTools Phosphor",
+      "developer": "PixelTools",
+      "tagline": "CRT / VHS / 摄像机复古模拟",
+      "category": [
+        "stylize"
+      ],
+      "tags": [
+        "CRT",
+        "VHS",
+        "复古",
+        "扫描线",
+        "老电视"
+      ],
+      "description": "模拟 21 种复古信号路径：广播级监视器、家用 CRT、VHS 录像机、摄像机、游戏主机信号链与退化广播状态。用于 MV、复古广告与怀旧风格短片。",
+      "license": "one-time",
+      "price": "一次性买断，免费更新",
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "officialHome": "https://pixeltoolspost.com/products/phosphor",
+      "officialDownload": "https://pixeltoolspost.com/products/phosphor",
+      "downloadVerified": true,
+      "sources": [
+        "https://pixeltoolspost.com/products/phosphor"
+      ],
+      "lastVerified": "2026-10-21",
+      "installationGuide": "官网购买后下载 OFX 安装包，在 Resolve OpenFX 面板调用。",
+      "knownIssues": [],
+      "compatibility": [
+        {
+          "host": "davinci-resolve",
+          "officialSupport": "supported",
+          "studioOnly": true,
+          "evidenceLevel": "official-docs",
+          "notes": "官网明确为 DaVinci Resolve Studio OFX 插件"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力"
+        }
+      ]
+    },
+    {
+      "id": "newblue-titler-pro",
+      "slug": "newblue-titler-pro",
+      "name": "NewBlue Titler Pro 7",
+      "developer": "NewBlue",
+      "tagline": "500+ 模板的 3D 动态字幕",
+      "category": [
+        "effects"
+      ],
+      "tags": [
+        "字幕",
+        "3D 标题",
+        "下三分之一",
+        "动态图形"
+      ],
+      "description": "行业标准的 3D 动态字幕插件，500+ 预设模板，支持 PS/AE 素材导入，标题动画可跟随剪辑点动态调整。在 Resolve 剪辑页与调色页均可调用。",
+      "license": "one-time",
+      "price": "一次性买断，价格以官网为准",
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "officialHome": "https://newbluefx.com/products/titling/titler-pro/",
+      "officialDownload": "https://newbluefx.com/resolve-plugins/",
+      "downloadVerified": true,
+      "sources": [
+        "https://newbluefx.com/products/titling/titler-pro/",
+        "https://newbluefx.com/resolve-plugins/"
+      ],
+      "lastVerified": "2026-10-21",
+      "installationGuide": "官网下载 DaVinci Resolve 专用安装包，安装后在 Effects Library 的 NewBlue 分类下拖拽 Titler Pro 到时间线。",
+      "knownIssues": [
+        "部分高级转场仅在 TotalFX 合集中提供"
+      ],
+      "compatibility": [
+        {
+          "host": "davinci-resolve",
+          "officialSupport": "supported",
+          "studioOnly": true,
+          "evidenceLevel": "official-docs",
+          "notes": "官网 Resolve 插件页明确列出 Titler Pro 7"
+        },
+        {
+          "host": "vegas-pro",
+          "officialSupport": "supported",
+          "studioOnly": false,
+          "evidenceLevel": "official-docs",
+          "notes": "官方支持 VEGAS Pro（64-bit OpenFX）"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力"
+        }
+      ]
+    },
+    {
+      "id": "openfx-misc",
+      "slug": "openfx-misc",
+      "name": "openfx-misc（Natron 插件集）",
+      "developer": "Frédéric Devernay / NatronGitHub",
+      "tagline": "开源合成基础工具集（GPL）",
+      "category": [
+        "effects",
+        "repair"
+      ],
+      "tags": [
+        "开源",
+        "blur",
+        "sharpen",
+        "transform",
+        "text",
+        "CImg"
+      ],
+      "description": "Natron 项目维护的开源 OFX 插件集，提供 Blur/Sharpen/Transform/Text/TimeOffset 等基础合成节点，全部 GPL 协议。任何 OFX 宿主理论上都可加载，商业宿主通常自带等价工具。",
+      "license": "open-source",
+      "price": "免费开源（GPLv2）",
+      "platforms": [
+        "windows",
+        "macos",
+        "linux"
+      ],
+      "officialHome": "http://devernay.free.fr/hacks/openfx/",
+      "officialDownload": "https://github.com/NatronGitHub/openfx-misc",
+      "downloadVerified": true,
+      "sources": [
+        "https://github.com/NatronGitHub/openfx-misc",
+        "http://devernay.free.fr/hacks/openfx/"
+      ],
+      "lastVerified": "2026-10-21",
+      "installationGuide": "从 GitHub Releases 下载预编译包，或将 OFX 插件目录加入宿主的 OpenFX 插件搜索路径。",
+      "knownIssues": [
+        "Resolve 对第三方开源 OFX 的加载路径需手动配置；性能低于商业宿主自带节点"
+      ],
+      "compatibility": [
+        {
+          "host": "nuke",
+          "officialSupport": "unconfirmed",
+          "studioOnly": false,
+          "evidenceLevel": "community-report",
+          "notes": "官方说明设计给 Natron，理论上兼容任何 OFX 宿主"
+        },
+        {
+          "host": "fusion",
+          "officialSupport": "unconfirmed",
+          "studioOnly": false,
+          "evidenceLevel": "community-report",
+          "notes": "理论 OFX 兼容，社区有加载报告"
+        },
+        {
+          "host": "davinci-resolve",
+          "officialSupport": "unconfirmed",
+          "studioOnly": false,
+          "evidenceLevel": "community-report",
+          "notes": "OFX 宿主理论兼容，需手动配置插件路径，本站未独立实测"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力"
+        }
+      ]
+    },
+    {
+      "id": "openfx-io",
+      "slug": "openfx-io",
+      "name": "openfx-io（Natron 读写器）",
+      "developer": "Frédéric Devernay / NatronGitHub",
+      "tagline": "开源图像/视频读写器插件",
+      "category": [
+        "repair"
+      ],
+      "tags": [
+        "开源",
+        "reader",
+        "writer",
+        "FFmpeg",
+        "OpenImageIO"
+      ],
+      "description": "Natron 项目的开源读写器插件集，基于 OpenImageIO 与 FFmpeg，支持 EXR/DPX/PNG/TIFF/ProRes/MP4/MOV 等多种格式在 OFX 宿主内直接读写。",
+      "license": "open-source",
+      "price": "免费开源（GPLv2）",
+      "platforms": [
+        "windows",
+        "macos",
+        "linux"
+      ],
+      "officialHome": "http://devernay.free.fr/hacks/openfx/",
+      "officialDownload": "https://github.com/NatronGitHub/openfx-io",
+      "downloadVerified": true,
+      "sources": [
+        "https://github.com/NatronGitHub/openfx-io",
+        "http://devernay.free.fr/hacks/openfx/"
+      ],
+      "lastVerified": "2026-10-21",
+      "installationGuide": "GitHub Releases 下载预编译包，配置到宿主 OFX 插件搜索路径。",
+      "knownIssues": [
+        "商业宿主通常自带更完善的读写器，此插件主要服务 Natron 与开源流程"
+      ],
+      "compatibility": [
+        {
+          "host": "nuke",
+          "officialSupport": "unconfirmed",
+          "studioOnly": false,
+          "evidenceLevel": "community-report",
+          "notes": "理论 OFX 兼容"
+        },
+        {
+          "host": "fusion",
+          "officialSupport": "unconfirmed",
+          "studioOnly": false,
+          "evidenceLevel": "community-report",
+          "notes": "理论 OFX 兼容"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力"
+        }
+      ]
+    },
+    {
+      "id": "openfx-arena",
+      "slug": "openfx-arena",
+      "name": "openfx-arena",
+      "developer": "NatronGitHub",
+      "tagline": "开源额外特效插件集",
+      "category": [
+        "effects",
+        "stylize"
+      ],
+      "tags": [
+        "开源",
+        "arena",
+        "GPU",
+        "CImg"
+      ],
+      "description": "Natron 生态下的额外开源 OFX 插件集合，提供部分 GPU 加速效果与实验性节点，与 openfx-misc、openfx-io 共同构成 Natron 开源插件三件套。",
+      "license": "open-source",
+      "price": "免费开源（GPLv2）",
+      "platforms": [
+        "windows",
+        "macos",
+        "linux"
+      ],
+      "officialHome": "https://github.com/NatronGitHub/openfx-arena",
+      "officialDownload": "https://github.com/NatronGitHub/openfx-arena/releases",
+      "downloadVerified": true,
+      "sources": [
+        "https://github.com/NatronGitHub/openfx-arena"
+      ],
+      "lastVerified": "2026-10-21",
+      "installationGuide": "GitHub Releases 下载预编译包，与 openfx-misc 同样配置 OFX 插件路径。",
+      "knownIssues": [
+        "项目更新频率较低，部分插件仍在实验阶段"
+      ],
+      "compatibility": [
+        {
+          "host": "nuke",
+          "officialSupport": "unconfirmed",
+          "studioOnly": false,
+          "evidenceLevel": "community-report",
+          "notes": "理论 OFX 兼容"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力"
+        }
+      ]
     }
   ]
 };
