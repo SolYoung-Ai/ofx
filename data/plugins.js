@@ -1,0 +1,823 @@
+window.PLUGINS_DATA = {
+  "schemaVersion": "1.1",
+  "siteName": "OFX Atlas",
+  "lastVerified": "2026-10-21",
+  "evidenceLevels": {
+    "official-docs": "官方文档 / 官网页面明确声明",
+    "vendor-statement": "厂商发布页或官方公告声明",
+    "community-report": "社区用户实测反馈（待复核）",
+    "self-tested": "OFX Atlas 本站独立实测",
+    "no-official-info": "官方资料尚未确认，暂无可复现实测"
+  },
+  "compatibilityStatus": {
+    "confirmed": "实测通过",
+    "partial": "部分可用",
+    "failed": "实测失败",
+    "official-supported": "官方声明支持（本站尚未独立实测）",
+    "unconfirmed": "官方资料尚未确认",
+    "not-supported": "官方确认不支持",
+    "user-report": "用户反馈待复核"
+  },
+  "plugins": [
+    {
+      "id": "dehancer-pro",
+      "slug": "dehancer-pro",
+      "name": "Dehancer Pro",
+      "developer": "Dehancer LLC",
+      "tagline": "物理级胶片模拟与电影感调色",
+      "category": [
+        "film-emulation",
+        "color-grading"
+      ],
+      "tags": [
+        "胶片模拟",
+        "颗粒",
+        "辉光",
+        "暗角",
+        "色彩管理",
+        "Log"
+      ],
+      "description": "以真实胶片光化学过程建模的调色插件，提供多款相机负片与胶片印片风格、物理准确的颗粒与辉光，适合想要电影质感、画面不脏的创作者。对静物、食品、人像类素材的高光过渡处理细腻。",
+      "license": "subscription",
+      "price": "订阅制，价格以官网为准",
+      "platforms": [
+        "windows",
+        "macos",
+        "linux"
+      ],
+      "officialHome": "https://www.dehancer.com/",
+      "officialDownload": "https://www.dehancer.com/download",
+      "downloadVerified": true,
+      "sources": [
+        "https://www.dehancer.com/",
+        "https://blog.dehancer.com/beta-testing/dehancer-ofx-beta-for-davinci-resolve-macos-windows-linux/"
+      ],
+      "lastVerified": "2026-10-21",
+      "installationGuide": "官网下载 DaVinci Resolve OFX 安装包（Windows/macOS/Linux 分开），安装后在 Resolve Studio 色彩页的 OpenFX 面板中调用。",
+      "knownIssues": [
+        "NVIDIA 部分驱动版本（461/516/522 等）可能导致插件崩溃，官方建议更换兼容驱动",
+        "AMD 驱动高于 23.4.1 在达芬奇中可能出现显存泄漏",
+        "对 GPU 显存要求高：4K 素材建议 8GB 显存，8K 建议 16GB+"
+      ],
+      "compatibility": [
+        {
+          "host": "davinci-resolve",
+          "officialSupport": "supported",
+          "studioOnly": true,
+          "evidenceLevel": "official-docs",
+          "notes": "官方提供 OFX 版，支持 DaVinci Resolve Studio（Windows/macOS/Linux）"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力，暂无可复现的原生兼容实测"
+        }
+      ]
+    },
+    {
+      "id": "filmconvert-nitrate",
+      "slug": "filmconvert-nitrate",
+      "name": "FilmConvert Nitrate",
+      "developer": "FilmConvert",
+      "tagline": "基于真实胶片数据的写实胶片模拟",
+      "category": [
+        "film-emulation",
+        "color-grading"
+      ],
+      "tags": [
+        "胶片模拟",
+        "颗粒",
+        "相机匹配",
+        "Log"
+      ],
+      "description": "基于真实胶片数据建模的调色插件，支持主流相机素材一键匹配，颗粒自然可控，逻辑简单不易翻车，适合需要快速统一多段素材色调的创作流程。一次性买断，无水印试用版可用。",
+      "license": "one-time",
+      "price": "$119（原价 $149），Halation 附加包 $99",
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "officialHome": "https://www.filmconvert.com/",
+      "officialDownload": "https://www.filmconvert.com/download",
+      "downloadVerified": true,
+      "sources": [
+        "https://www.filmconvert.com/nitrate",
+        "https://www.filmconvert.com/purchase"
+      ],
+      "lastVerified": "2026-10-21",
+      "installationGuide": "官网注册邮箱获取试用版，购买后通过登录或 .fkv 文件激活。DaVinci Resolve 插件版在色彩页 OpenFX 面板调用。",
+      "knownIssues": [
+        "FilmConvert Pro 为已停止支持的旧版，新用户应购买 Nitrate",
+        "Halation 为单独附加模块，不含在基础授权内"
+      ],
+      "compatibility": [
+        {
+          "host": "davinci-resolve",
+          "officialSupport": "supported",
+          "studioOnly": true,
+          "evidenceLevel": "official-docs",
+          "notes": "官网提供 DaVinci Resolve 插件版，macOS（含 Apple Silicon）与 Windows"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力，暂无可复现的原生兼容实测"
+        }
+      ]
+    },
+    {
+      "id": "filmbox-looks",
+      "slug": "filmbox-looks",
+      "name": "Filmbox Looks",
+      "developer": "Video Village",
+      "tagline": "电影级胶片仿真的精简版本",
+      "category": [
+        "film-emulation",
+        "color-grading"
+      ],
+      "tags": [
+        "胶片模拟",
+        "色彩",
+        "电影感"
+      ],
+      "description": "与 Filmb0x Pro 同源的光化学处理引擎，主打高速高效的胶片仿真工作流，支持达芬奇、Baselight 等多宿主。Looks 为预设驱动版本，价格远低于 Pro，适合希望获得电影级色彩但预算有限的创作者。",
+      "license": "subscription-or-one-time",
+      "price": "$29/季度 或 $199 永久",
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "officialHome": "https://videovillage.com/filmbox-looks/",
+      "officialDownload": "https://videovillage.com/filmbox-looks/",
+      "downloadVerified": true,
+      "sources": [
+        "https://videovillage.com/filmbox-looks/"
+      ],
+      "lastVerified": "2026-10-21",
+      "installationGuide": "通过 Video Village Plugins 应用安装与激活，支持 DaVinci Resolve、Baselight、Livegrade、Premiere Pro、After Effects、Final Cut Pro。",
+      "knownIssues": [
+        "Filmbox Pro（更完整的旗舰版）价格较高，独立版约 $999 起",
+        "需通过 Video Village 官方插件管理器安装，无独立安装包"
+      ],
+      "compatibility": [
+        {
+          "host": "davinci-resolve",
+          "officialSupport": "supported",
+          "studioOnly": true,
+          "evidenceLevel": "official-docs",
+          "notes": "官方明确支持 DaVinci Resolve（OFX）"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力，暂无可复现的原生兼容实测"
+        }
+      ]
+    },
+    {
+      "id": "spektrafilm",
+      "slug": "spektrafilm",
+      "name": "Spektrafilm OFX",
+      "developer": "Community / 独立开发者",
+      "tagline": "免费的光谱级胶片模拟（捐赠制）",
+      "category": [
+        "film-emulation",
+        "color-grading",
+        "free"
+      ],
+      "tags": [
+        "胶片模拟",
+        "免费",
+        "颗粒",
+        "辉光",
+        "扩散"
+      ],
+      "description": "免费开源倾向的 OFX 胶片模拟插件，从曝光、负片冲洗到光学印片全链路光谱建模，内置多款相机负片与印片纸，含颗粒、辉光、扩散与镜头特性。仍在持续开发中，社区反馈效果好，适合预算有限或想试水胶片感的用户。",
+      "license": "free-donation",
+      "price": "免费（可向开发者捐赠）",
+      "platforms": [
+        "macos",
+        "windows"
+      ],
+      "officialHome": "https://spektrafilm.114c.de/",
+      "officialDownload": "https://spektrafilm.114c.de/",
+      "downloadVerified": true,
+      "sources": [
+        "https://spektrafilm.114c.de/",
+        "https://github.com/andreavolpato/spektrafilm"
+      ],
+      "lastVerified": "2026-10-21",
+      "installationGuide": "官网或 GitHub 发布页下载对应系统版本，按说明安装到达芬奇 OFX 插件目录。",
+      "knownIssues": [
+        "仍处于 beta / 持续开发阶段",
+        "部分平台版本需从 GitHub 手动获取构建"
+      ],
+      "compatibility": [
+        {
+          "host": "davinci-resolve",
+          "officialSupport": "supported",
+          "studioOnly": true,
+          "evidenceLevel": "official-docs",
+          "notes": "官方站点面向 DaVinci Resolve 分发，社区实测反馈正常"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力，暂无可复现的原生兼容实测"
+        }
+      ]
+    },
+    {
+      "id": "neat-video",
+      "slug": "neat-video",
+      "name": "Neat Video",
+      "developer": "ABSoft",
+      "tagline": "降噪天花板，保留画面细节",
+      "category": [
+        "noise-reduction",
+        "repair"
+      ],
+      "tags": [
+        "降噪",
+        "暗光",
+        "高ISO",
+        "细节保留"
+      ],
+      "description": "业界标杆级视频降噪插件，通过噪声分布分析在去除噪点的同时保留边缘与纹理细节，适合暗光、高ISO素材与产品特写画面。支持 GPU 加速，提供 Windows / macOS / Linux 版本。",
+      "license": "one-time",
+      "price": "从 $99.90 起（以官网为准）",
+      "platforms": [
+        "windows",
+        "macos",
+        "linux"
+      ],
+      "officialHome": "https://www.neatvideo.com/",
+      "officialDownload": "https://www.neatvideo.com/download",
+      "downloadVerified": true,
+      "sources": [
+        "https://www.neatvideo.com/purchase",
+        "https://www.neatvideo.com/features/compatibility"
+      ],
+      "lastVerified": "2026-10-21",
+      "installationGuide": "官网下载对应宿主版本（Resolve/OFX），Demo 版处理结果带水印，购买 Pro 授权后解锁。",
+      "knownIssues": [
+        "达芬奇对时间性效果占用大量 GPU 显存，4K 时间线官方建议至少 8GB 显存",
+        "显存不足时可能明显变慢"
+      ],
+      "compatibility": [
+        {
+          "host": "davinci-resolve",
+          "officialSupport": "supported",
+          "studioOnly": true,
+          "evidenceLevel": "official-docs",
+          "notes": "官方提供 Resolve 版本（含用户指南），支持 Windows/macOS/Linux"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力，暂无可复现的原生兼容实测"
+        }
+      ]
+    },
+    {
+      "id": "revision-effects",
+      "slug": "revision-effects",
+      "name": "RE:Vision Effects（Twixtor / DE:Noise 等）",
+      "developer": "RE:Vision Effects, Inc.",
+      "tagline": "光流变速与智能修复工具集",
+      "category": [
+        "retime",
+        "repair",
+        "color-grading"
+      ],
+      "tags": [
+        "变速",
+        "光流",
+        "降噪",
+        "去闪烁",
+        "放大"
+      ],
+      "description": "奥斯卡技术奖得主，旗下 Twixtor（光流变速）、DE:Noise（降噪）、ReelSmart Motion Blur（运动模糊）、REZup（放大）等均为业界常用工具，支持 OFX 宿主。适合需要慢动作、去闪烁、画质修复的专业工作流。",
+      "license": "subscription-or-one-time",
+      "price": "各产品单独定价（订阅或一次性），以官网为准",
+      "platforms": [
+        "windows",
+        "macos",
+        "linux"
+      ],
+      "officialHome": "https://revisionfx.com/",
+      "officialDownload": "https://revisionfx.com/products/",
+      "downloadVerified": true,
+      "sources": [
+        "https://revisionfx.com/products/twixtor/resolve/",
+        "https://revisionfx.com/products/effections/resolve/"
+      ],
+      "lastVerified": "2026-10-21",
+      "installationGuide": "官网下载对应产品试用版（带水印），购买授权后解锁；Twixtor 支持 Resolve 15.0 及以上。",
+      "knownIssues": [
+        "Windows 多 NVIDIA GPU 环境下曾出现 GPU 加速崩溃（新版已修复）",
+        "各产品需单独购买授权"
+      ],
+      "compatibility": [
+        {
+          "host": "davinci-resolve",
+          "officialSupport": "supported",
+          "studioOnly": true,
+          "evidenceLevel": "official-docs",
+          "notes": "Twixtor 等明确支持 Resolve 15.0+（OFX）"
+        },
+        {
+          "host": "vegas-pro",
+          "officialSupport": "supported",
+          "studioOnly": false,
+          "evidenceLevel": "official-docs",
+          "notes": "官方列出 VEGAS Pro 兼容"
+        },
+        {
+          "host": "nuke",
+          "officialSupport": "supported",
+          "studioOnly": false,
+          "evidenceLevel": "official-docs",
+          "notes": "支持 Nuke 5.1 及以上"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力，暂无可复现的原生兼容实测"
+        }
+      ]
+    },
+    {
+      "id": "boris-sapphire",
+      "slug": "boris-sapphire",
+      "name": "Boris FX Sapphire",
+      "developer": "Boris FX",
+      "tagline": "获奖无数的电影级特效合集",
+      "category": [
+        "effects",
+        "stylize"
+      ],
+      "tags": [
+        "光效",
+        "辉光",
+        "镜头光晕",
+        "柔光",
+        "转场",
+        "跟踪"
+      ],
+      "description": "行业标杆特效套装，含数百种效果：辉光、镜头光晕、柔光扩散、纹理、转场等，自带 Mocha 跟踪，可在达芬奇、Nuke、Vegas、Flame 等 OFX 宿主使用。适合影视级光效与氛围感创作。",
+      "license": "subscription",
+      "price": "订阅 $545/年 或 $80/月（多宿主授权 $895/年）",
+      "platforms": [
+        "windows",
+        "macos",
+        "linux"
+      ],
+      "officialHome": "https://borisfx.com/products/sapphire/",
+      "officialDownload": "https://borisfx.com/products/sapphire/",
+      "downloadVerified": true,
+      "sources": [
+        "https://borisfx.com/products/sapphire/",
+        "https://borisfx.com/news/sapphire-2026-an-ode-to-physical-media/"
+      ],
+      "lastVerified": "2026-10-21",
+      "installationGuide": "通过 Boris FX Hub 下载并管理安装，可选择 OFX 版本安装器；试用带水印。",
+      "knownIssues": [
+        "安装体积大，建议按需选择宿主安装器",
+        "试用版输出带水印"
+      ],
+      "compatibility": [
+        {
+          "host": "davinci-resolve",
+          "officialSupport": "supported",
+          "studioOnly": true,
+          "evidenceLevel": "official-docs",
+          "notes": "官方明确支持 DaVinci Resolve（OFX）"
+        },
+        {
+          "host": "nuke",
+          "officialSupport": "supported",
+          "studioOnly": false,
+          "evidenceLevel": "official-docs",
+          "notes": "支持 Foundry Nuke（OFX）"
+        },
+        {
+          "host": "vegas-pro",
+          "officialSupport": "supported",
+          "studioOnly": false,
+          "evidenceLevel": "official-docs",
+          "notes": "支持 VEGAS Pro（OFX）"
+        },
+        {
+          "host": "fusion",
+          "officialSupport": "supported",
+          "studioOnly": false,
+          "evidenceLevel": "official-docs",
+          "notes": "支持 Fusion Studio（OFX）"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力，暂无可复现的原生兼容实测"
+        }
+      ]
+    },
+    {
+      "id": "boris-continuum",
+      "slug": "boris-continuum",
+      "name": "Boris FX Continuum (BCC)",
+      "developer": "Boris FX",
+      "tagline": "AI 辅助的全能后期工具包",
+      "category": [
+        "effects",
+        "repair",
+        "stylize"
+      ],
+      "tags": [
+        "磨皮",
+        "防抖",
+        "光效",
+        "转场",
+        "AI",
+        "修复"
+      ],
+      "description": "包含 300+ 效果的综合性插件包：AI 磨皮美颜、光学防抖、脏点修复、光效、转场等，适合需要一站式后期辅助工具的内容团队。支持达芬奇、Nuke、Vegas 等 OFX 宿主。",
+      "license": "subscription",
+      "price": "订阅 $325/年 或 $48/月",
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "officialHome": "https://borisfx.com/products/continuum/",
+      "officialDownload": "https://borisfx.com/products/continuum/",
+      "downloadVerified": true,
+      "sources": [
+        "https://borisfx.com/products/continuum/",
+        "https://genarts.net/news/continuum-2026-5-ai-precision-more-creative-control/"
+      ],
+      "lastVerified": "2026-10-21",
+      "installationGuide": "通过 Boris FX Hub 下载安装，选择 OFX 版本；试用带水印。",
+      "knownIssues": [
+        "完整套装安装体积较大",
+        "试用版输出带水印"
+      ],
+      "compatibility": [
+        {
+          "host": "davinci-resolve",
+          "officialSupport": "supported",
+          "studioOnly": true,
+          "evidenceLevel": "official-docs",
+          "notes": "支持 DaVinci Resolve & Fusion（OFX）"
+        },
+        {
+          "host": "nuke",
+          "officialSupport": "supported",
+          "studioOnly": false,
+          "evidenceLevel": "official-docs",
+          "notes": "支持 Foundry Nuke（OFX）"
+        },
+        {
+          "host": "vegas-pro",
+          "officialSupport": "supported",
+          "studioOnly": false,
+          "evidenceLevel": "official-docs",
+          "notes": "支持 VEGAS Pro（OFX）"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力，暂无可复现的原生兼容实测"
+        }
+      ]
+    },
+    {
+      "id": "maxon-red-giant",
+      "slug": "maxon-red-giant",
+      "name": "Maxon Red Giant（Magic Bullet Suite）",
+      "developer": "Maxon",
+      "tagline": "好莱坞调色师常用的调色套装",
+      "category": [
+        "color-grading",
+        "film-emulation"
+      ],
+      "tags": [
+        "调色",
+        "胶片",
+        "磨皮",
+        "降噪",
+        "Looks"
+      ],
+      "description": "Red Giant 旗下 Magic Bullet Suite 包含 Looks（调色）、Mojo、Cosmo（皮肤修饰）、Denoiser（降噪）等工具，支持 OFX 宿主（DaVinci Resolve 等），是广受认可的影视调色套装。",
+      "license": "subscription",
+      "price": "Red Giant 订阅制，价格以官网为准",
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "officialHome": "https://www.maxon.net/en/red-giant",
+      "officialDownload": "https://www.maxon.net/en/red-giant",
+      "downloadVerified": true,
+      "sources": [
+        "https://www.maxon.net/en/red-giant",
+        "https://www.maxon.net/en/solutions/color-grading"
+      ],
+      "lastVerified": "2026-10-21",
+      "installationGuide": "通过 Maxon App 安装与授权，支持 DaVinci Resolve（OFX）等多个宿主。",
+      "knownIssues": [
+        "仅订阅制，无一次性买断",
+        "需要 Maxon 账号与 Maxon App 管理"
+      ],
+      "compatibility": [
+        {
+          "host": "davinci-resolve",
+          "officialSupport": "supported",
+          "studioOnly": true,
+          "evidenceLevel": "official-docs",
+          "notes": "官方明确支持基于 OFX 的 DaVinci Resolve（Magic Bullet Looks 等）"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力，暂无可复现的原生兼容实测"
+        }
+      ]
+    },
+    {
+      "id": "video-village-scatter",
+      "slug": "video-village-scatter",
+      "name": "Video Village Scatter",
+      "developer": "Video Village",
+      "tagline": "物理准确的后期光学扩散",
+      "category": [
+        "stylize",
+        "diffusion"
+      ],
+      "tags": [
+        "柔光",
+        "扩散",
+        "光学滤镜模拟",
+        "高光"
+      ],
+      "description": "以物理光学建模的扩散/柔光插件，模拟真实光学滤镜效果，高光过渡自然，适合拍摄后为画面添加柔光氛围感，是高端影视调色的常用工具。",
+      "license": "subscription-or-one-time",
+      "price": "$199/年 或 $499 永久（14 天免费试用）",
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "officialHome": "https://videovillage.com/scatter/",
+      "officialDownload": "https://videovillage.com/scatter/buy",
+      "downloadVerified": true,
+      "sources": [
+        "https://videovillage.com/scatter/",
+        "https://videovillage.com/scatter/buy"
+      ],
+      "lastVerified": "2026-10-21",
+      "installationGuide": "通过 Video Village Plugins 应用安装与激活，支持 DaVinci Resolve、Baselight 等。",
+      "knownIssues": [
+        "价格相对较高",
+        "参数调节范围刻意受限（为了贴近真实滤镜效果）"
+      ],
+      "compatibility": [
+        {
+          "host": "davinci-resolve",
+          "officialSupport": "supported",
+          "studioOnly": true,
+          "evidenceLevel": "official-docs",
+          "notes": "官方明确支持 DaVinci Resolve"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力，暂无可复现的原生兼容实测"
+        }
+      ]
+    },
+    {
+      "id": "nobe-omniscope",
+      "slug": "nobe-omniscope",
+      "name": "Nobe OmniScope",
+      "developer": "Time in Pixels",
+      "tagline": "专业示波器，调色师的眼睛",
+      "category": [
+        "scopes",
+        "monitoring"
+      ],
+      "tags": [
+        "示波器",
+        "波形图",
+        "矢量图",
+        "HDR",
+        "监看"
+      ],
+      "description": "专业级视频示波器 OFX 插件，提供波形、矢量、直方图、HDR 标尺等完整监看工具，支持 StreamDeck 等硬件联动，适合调色与直播监看场景。",
+      "license": "one-time",
+      "price": "Video 版 $99 / Pro 版 $399（支持费用另计）",
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "officialHome": "https://www.timeinpixels.com/nobe-omniscope/",
+      "officialDownload": "https://www.timeinpixels.com/nobe-omniscope/",
+      "downloadVerified": true,
+      "sources": [
+        "https://www.timeinpixels.com/nobe-omniscope/"
+      ],
+      "lastVerified": "2026-10-21",
+      "installationGuide": "官网下载对应平台安装包，激活后作为 OFX 在达芬奇中调用。",
+      "knownIssues": [
+        "Pro 版额外需要年度支持费用",
+        "部分高级功能（如 HDR 标尺、StreamDeck）仅在 Pro 版提供"
+      ],
+      "compatibility": [
+        {
+          "host": "davinci-resolve",
+          "officialSupport": "supported",
+          "studioOnly": true,
+          "evidenceLevel": "official-docs",
+          "notes": "官方明确支持 DaVinci Resolve（OFX）"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力，暂无可复现的原生兼容实测"
+        }
+      ]
+    },
+    {
+      "id": "mononodes-look-lab",
+      "slug": "mononodes-look-lab",
+      "name": "Mononodes Look Lab Print",
+      "developer": "MONONODES",
+      "tagline": "从 DCTL 走向 OFX 的调色工具",
+      "category": [
+        "color-grading",
+        "film-emulation"
+      ],
+      "tags": [
+        "调色",
+        "色彩科学",
+        "节点",
+        "一次性买断"
+      ],
+      "description": "原为达芬奇 DCTL 工具，现重写为 OFX 插件，提供色彩科学驱动的调色方案，一次性买断无订阅。另有免费的 Node Toggle 工具可试用。",
+      "license": "one-time",
+      "price": "Look Lab Print €399（Studio 版 €799）",
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "officialHome": "https://mononodes.com/look-lab-print-ofx/",
+      "officialDownload": "https://mononodes.com/look-lab-print-ofx/",
+      "downloadVerified": true,
+      "sources": [
+        "https://mononodes.com/look-lab-print-ofx/"
+      ],
+      "lastVerified": "2026-10-21",
+      "installationGuide": "官网购买后下载安装，兼容 DaVinci Resolve Studio。",
+      "knownIssues": [
+        "兼容 DaVinci Resolve Studio",
+        "旧 DCTL 版已停止销售，新用户购买 OFX 版"
+      ],
+      "compatibility": [
+        {
+          "host": "davinci-resolve",
+          "officialSupport": "supported",
+          "studioOnly": true,
+          "evidenceLevel": "official-docs",
+          "notes": "官方明确兼容 DaVinci Resolve Studio"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力，暂无可复现的原生兼容实测"
+        }
+      ]
+    },
+    {
+      "id": "digital-anarchy-flicker-free",
+      "slug": "digital-anarchy-flicker-free",
+      "name": "Digital Anarchy Flicker Free",
+      "developer": "Digital Anarchy",
+      "tagline": "去除频闪与时间码闪烁",
+      "category": [
+        "repair"
+      ],
+      "tags": [
+        "去闪烁",
+        "频闪",
+        "修复",
+        "时间码"
+      ],
+      "description": "专门去除 LED 屏幕拍摄频闪、时间码滚动、日光灯闪烁等问题的修复插件，支持 GPU 加速与运动补偿，适合拍摄屏幕、直播、舞台等场景的后期修复。",
+      "license": "one-time",
+      "price": "$149（Flicker Free 2.0）至 $199（3.0）",
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "officialHome": "https://www.digitalanarchy.com/flicker-free.html",
+      "officialDownload": "https://www.digitalanarchy.com/flicker-free.html",
+      "downloadVerified": true,
+      "sources": [
+        "https://www.digitalanarchy.com/support/flicker-free/"
+      ],
+      "lastVerified": "2026-10-21",
+      "installationGuide": "官网购买/下载试用，支持 Resolve/OFX 授权（也可购买全宿主授权）。",
+      "knownIssues": [
+        "其他 OFX 宿主（如 Vegas）虽可能可用，但官方未列入正式支持",
+        "授权按宿主区分，跨宿主需另购"
+      ],
+      "compatibility": [
+        {
+          "host": "davinci-resolve",
+          "officialSupport": "supported",
+          "studioOnly": true,
+          "evidenceLevel": "official-docs",
+          "notes": "官方支持 Resolve/OFX 授权"
+        },
+        {
+          "host": "vegas-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "vendor-statement",
+          "notes": "厂商表示在 Vegas 等 OFX 应用中可能可用，但未列入官方正式支持"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力，暂无可复现的原生兼容实测"
+        }
+      ]
+    },
+    {
+      "id": "3d-lut-creator",
+      "slug": "3d-lut-creator",
+      "name": "3D LUT Creator（免费 OFX 版）",
+      "developer": "3D LUT Creator",
+      "tagline": "免费可用的 LUT 制作与加载工具",
+      "category": [
+        "color-grading",
+        "free"
+      ],
+      "tags": [
+        "LUT",
+        "调色",
+        "免费"
+      ],
+      "description": "3D LUT Creator 提供的免费 OFX 插件，可在达芬奇与 VEGAS Pro 中加载与应用 LUT，适合需要 LUT 管理与调色的免费方案。",
+      "license": "free",
+      "price": "免费",
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "officialHome": "https://3dlutcreator.com/free-plugins.html",
+      "officialDownload": "https://3dlutcreator.com/free-plugins.html",
+      "downloadVerified": true,
+      "sources": [
+        "https://3dlutcreator.com/free-plugins.html"
+      ],
+      "lastVerified": "2026-10-21",
+      "installationGuide": "官网免费插件页下载安装，兼容 DaVinci Resolve 与 VEGAS Pro；macOS 下需使用官网渠道安装的达芬奇（App Store 版本可能无法加载）。",
+      "knownIssues": [
+        "macOS 下 App Store 版达芬奇可能无法加载该插件",
+        "功能聚焦于 LUT 加载，不含完整调色工具"
+      ],
+      "compatibility": [
+        {
+          "host": "davinci-resolve",
+          "officialSupport": "supported",
+          "studioOnly": true,
+          "evidenceLevel": "official-docs",
+          "notes": "官方明确兼容 DaVinci Resolve（macOS 需官网版）"
+        },
+        {
+          "host": "vegas-pro",
+          "officialSupport": "supported",
+          "studioOnly": false,
+          "evidenceLevel": "official-docs",
+          "notes": "官方明确兼容 VEGAS Pro"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力，暂无可复现的原生兼容实测"
+        }
+      ]
+    }
+  ]
+};
