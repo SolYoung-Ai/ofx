@@ -32,7 +32,7 @@ window.OFXI18N = (() => {
     "hero.badge": { zh: "OFX 插件兼容性数据库 · 仅做官方导航", en: "OFX Plugin Compatibility Database · Official Links Only" },
     "hero.title1": { zh: "找到能用的 OFX 插件，", en: "Find OFX plugins that work —" },
     "hero.title2": { zh: "看清它在哪个宿主里真的能跑。", en: "and see which hosts they actually run in." },
-    "hero.sub": { zh: "OFX Atlas 收录官网可核验的 OFX 视频插件，标注宿主兼容性证据等级与实测状态，提供对比、排错与快捷复制工具。本站不托管、不分发任何插件安装包，所有下载均跳转官方页面。", en: "OFX Atlas indexes OFX video plugins with verifiable official sources, marks host-compatibility evidence levels and test status, and offers compare, troubleshooting and quick-copy tools. This site does not host or distribute any plugin installers — every download links to the official page." },
+    "hero.sub": { zh: "OFX Atlas 收录官网可核验的 OFX 视频插件，标注宿主兼容性证据等级与实测状态，提供对比与排错工具。本站不托管、不分发任何插件安装包，所有下载均跳转官方页面。", en: "OFX Atlas indexes OFX video plugins with verifiable official sources, marks host-compatibility evidence levels and test status, and offers compare and troubleshooting tools. This site does not host or distribute any plugin installers — every download links to the official page." },
     "hero.search.placeholder": { zh: "搜索插件名称、开发者、标签…（例如：胶片模拟 / Dehancer / 降噪）", en: "Search plugin name, developer, tags… (e.g. film emulation / Dehancer / denoise)" },
     "hero.search.btn": { zh: "搜索", en: "Search" },
 

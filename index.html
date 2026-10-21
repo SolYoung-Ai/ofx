@@ -6,7 +6,7 @@
 <meta name="description" content="OFX Atlas —— OFX 视频插件兼容性实测数据库与工具站，覆盖剪映专业版、DaVinci Resolve 等宿主。仅做官方导航，不托管任何插件安装包。">
 <title>OFX Atlas · OFX 插件兼容性数据库</title>
 <link rel="icon" type="image/png" href="assets/favicon.png">
-<link rel="stylesheet" href="css/styles.css?v=4">
+<link rel="stylesheet" href="css/styles.css?v=5">
 </head>
 <body>
 <a class="skip-link" href="#app-main" data-i18n="skip.main">跳到主要内容</a>
@@ -21,8 +21,6 @@
       <a href="#/" data-nav data-i18n="nav.plugins">插件库</a>
       <a href="#/compare" data-nav data-i18n="nav.compare">插件对比</a>
       <a href="#/troubleshoot" data-nav data-i18n="nav.troubleshoot">故障排查</a>
-      <a href="#/tools" data-nav data-i18n="nav.tools">快捷复制</a>
-      <a href="#/feedback" data-nav data-i18n="nav.feedback">反馈</a>
       <a href="#/changelog" data-nav data-i18n="nav.changelog">更新日志</a>
       <a href="#/about" data-nav data-i18n="nav.about">关于</a>
     </nav>
@@ -44,7 +42,7 @@
       <div class="hero">
         <div class="hero-badge" data-i18n="hero.badge">OFX 插件兼容性数据库 · 仅做官方导航</div>
         <h1><span data-i18n="hero.title1">找到能用的 OFX 插件，</span><br><span data-i18n="hero.title2">看清它在哪个宿主里真的能跑。</span></h1>
-        <p class="hero-sub" data-i18n="hero.sub">OFX Atlas 收录官网可核验的 OFX 视频插件，标注宿主兼容性证据等级与实测状态，提供对比、排错与快捷复制工具。本站<strong>不托管、不分发任何插件安装包</strong>，所有下载均跳转官方页面。</p>
+        <p class="hero-sub" data-i18n="hero.sub">OFX Atlas 收录官网可核验的 OFX 视频插件，标注宿主兼容性证据等级与实测状态，提供对比与排错工具。本站<strong>不托管、不分发任何插件安装包</strong>，所有下载均跳转官方页面。</p>
         <div class="hero-search">
           <input type="search" id="home-search" placeholder="搜索插件名称、开发者、标签…（例如：胶片模拟 / Dehancer / 降噪）" aria-label="搜索插件" data-i18n-placeholder="hero.search.placeholder">
           <button type="button" id="home-search-btn" data-i18n="hero.search.btn">搜索</button>
@@ -241,7 +239,7 @@
         <p data-i18n="about.copyright.body">本站优先使用原创图形、文字信息与适当的官方链接呈现插件信息，不复制第三方付费页面的产品图片、宣传文案或品牌资产。</p>
 
         <h2 data-i18n="about.fix.title">纠错与删除请求</h2>
-        <p><span data-i18n="about.fix.bodyPre">如需更正信息、报告失效链接或提出版权异议，请通过</span><a href="#/feedback" data-nav data-i18n="about.fix.link">反馈表单</a><span data-i18n="about.fix.body2">联系我们，我们会尽快处理。</span></p>
+        <p><span data-i18n="about.fix.bodyPre">如需更正信息、报告失效链接或提出版权异议，请发邮件至</span><a href="mailto:soyoang@outlook.com">soyoang@outlook.com</a><span data-i18n="about.fix.body2">联系我们，我们会尽快处理。</span></p>
 
         <h2 data-i18n="about.legal.title">法律提示</h2>
         <p data-i18n="about.legal.body">本页为一般性说明，不构成法律意见。商用前请购买正版授权并阅读各厂商的最终用户许可协议（EULA）。</p>
@@ -264,7 +262,6 @@
       <a href="#/" data-nav data-i18n="nav.plugins">插件库</a>
       <a href="#/changelog" data-nav data-i18n="nav.changelog">更新日志</a>
       <a href="#/about" data-nav data-i18n="nav.about">版权声明</a>
-      <a href="#/feedback" data-nav data-i18n="nav.feedback">反馈</a>
     </div>
     <div class="footer-note">
       <span data-i18n="footer.note">本站仅做官方导航，不托管任何插件安装包；商用请购买正版授权。数据核验日期：</span><span id="footer-verified"></span>
@@ -288,22 +285,22 @@
 <!-- Toast -->
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
-<script src="js/i18n.js?v=4"></script>
-<script src="data/plugins.js?v=4"></script>
-<script src="data/hosts.js?v=4"></script>
-<script src="data/troubleshooting.js?v=4"></script>
-<script src="data/changelog.js?v=4"></script>
-<script src="js/store.js?v=4"></script>
-<script src="js/utils.js?v=4"></script>
-<script src="js/router.js?v=4"></script>
-<script src="js/views/home.js?v=4"></script>
-<script src="js/views/plugin.js?v=4"></script>
-<script src="js/views/compare.js?v=4"></script>
-<script src="js/views/troubleshoot.js?v=4"></script>
-<script src="js/views/tools.js?v=4"></script>
-<script src="js/views/feedback.js?v=4"></script>
-<script src="js/views/changelog.js?v=4"></script>
-<script src="js/views/about.js?v=4"></script>
-<script src="js/app.js?v=4"></script>
+<script src="js/i18n.js?v=5"></script>
+<script src="data/plugins.js?v=5"></script>
+<script src="data/hosts.js?v=5"></script>
+<script src="data/troubleshooting.js?v=5"></script>
+<script src="data/changelog.js?v=5"></script>
+<script src="js/store.js?v=5"></script>
+<script src="js/utils.js?v=5"></script>
+<script src="js/router.js?v=5"></script>
+<script src="js/views/home.js?v=5"></script>
+<script src="js/views/plugin.js?v=5"></script>
+<script src="js/views/compare.js?v=5"></script>
+<script src="js/views/troubleshoot.js?v=5"></script>
+<script src="js/views/tools.js?v=5"></script>
+<script src="js/views/feedback.js?v=5"></script>
+<script src="js/views/changelog.js?v=5"></script>
+<script src="js/views/about.js?v=5"></script>
+<script src="js/app.js?v=5"></script>
 </body>
 </html>
