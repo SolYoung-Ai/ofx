@@ -784,11 +784,12 @@ window.PLUGINS_DATA = {
         "windows",
         "macos"
       ],
-      "officialHome": "https://3dlutcreator.com/free-plugins.html",
-      "officialDownload": "https://3dlutcreator.com/free-plugins.html",
+      "officialHome": "https://3dlutcreator.com/",
+      "officialDownload": "https://3dlutcreator.com/3d-lut-creator---free-plugins.html",
       "downloadVerified": true,
       "sources": [
-        "https://3dlutcreator.com/free-plugins.html"
+        "https://3dlutcreator.com/3d-lut-creator---free-plugins.html",
+        "https://3dlutcreator.com/products/video-retouch/201"
       ],
       "lastVerified": "2026-10-21",
       "installationGuide": "官网免费插件页下载安装，兼容 DaVinci Resolve 与 VEGAS Pro；macOS 下需使用官网渠道安装的达芬奇（App Store 版本可能无法加载）。",
