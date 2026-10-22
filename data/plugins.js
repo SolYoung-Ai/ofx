@@ -728,11 +728,11 @@ window.PLUGINS_DATA = {
         "windows",
         "macos"
       ],
-      "officialHome": "https://www.digitalanarchy.com/flicker-free.html",
-      "officialDownload": "https://www.digitalanarchy.com/flicker-free.html",
+      "officialHome": "https://www.digitalanarchy.com/",
+      "officialDownload": "https://www.digitalanarchy.com/downloads/davinci-resolve-ofx-flicker-free/",
       "downloadVerified": true,
       "sources": [
-        "https://www.digitalanarchy.com/support/flicker-free/"
+        "https://www.digitalanarchy.com/downloads/davinci-resolve-ofx-flicker-free/"
       ],
       "lastVerified": "2026-10-21",
       "installationGuide": "官网购买/下载试用，支持 Resolve/OFX 授权（也可购买全宿主授权）。",
@@ -1915,6 +1915,108 @@ window.PLUGINS_DATA = {
           "studioOnly": false,
           "evidenceLevel": "community-report",
           "notes": "社区报告在 Resolve 中工作"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力"
+        }
+      ]
+    },
+    {
+      "id": "colourlab-ai",
+      "slug": "colourlab-ai",
+      "name": "Colourlab AI（FilmLab OFX）",
+      "developer": "Colourlab.ai",
+      "tagline": "AI 自动调色与参考匹配",
+      "category": [
+        "color-grading",
+        "film-emulation"
+      ],
+      "tags": [
+        "AI",
+        "自动调色",
+        "参考匹配",
+        "Look Designer",
+        "Grainlab"
+      ],
+      "description": "AI 驱动的调色助手，作为 OFX 插件原生嵌入 DaVinci Resolve，自动白平衡、曝光、参考图匹配，含 Look Designer（设计电影感 LUT）与 Grainlab（胶片颗粒）。Pro 版 $400/年，14 天试用。",
+      "license": "subscription",
+      "price": "Pro $400/年，Studio $500/年，14 天试用",
+      "platforms": [
+        "windows",
+        "macos",
+        "linux"
+      ],
+      "officialHome": "https://colourlab.ai/",
+      "officialDownload": "https://colourlab.ai/pricing-colourlab/",
+      "downloadVerified": true,
+      "sources": [
+        "https://colourlab.ai/",
+        "https://help.colourlab.ai/hc/en-us/articles/27946608458391"
+      ],
+      "lastVerified": "2026-10-22",
+      "installationGuide": "官网下载 FilmLab AI OFX 安装包，安装后在 Resolve OpenFX 面板调用，需登录 Colourlab 账号激活。",
+      "knownIssues": [
+        "OFX 插件版不含批处理，批处理需独立桌面版"
+      ],
+      "compatibility": [
+        {
+          "host": "davinci-resolve",
+          "officialSupport": "supported",
+          "studioOnly": true,
+          "evidenceLevel": "official-docs",
+          "notes": "官方明确 OFX 插件版嵌入 Resolve，支持任意色彩空间"
+        },
+        {
+          "host": "jianying-pro",
+          "officialSupport": "unconfirmed",
+          "evidenceLevel": "no-official-info",
+          "notes": "剪映专业版官方未公开 OFX 宿主能力"
+        }
+      ]
+    },
+    {
+      "id": "colourlab-freelab",
+      "slug": "colourlab-freelab",
+      "name": "Colourlab Freelab",
+      "developer": "Colourlab.ai",
+      "tagline": "免费自动相机 LUT 匹配插件",
+      "category": [
+        "color-grading"
+      ],
+      "tags": [
+        "免费",
+        "LUT",
+        "相机匹配",
+        "AI"
+      ],
+      "description": "Colourlab 出品的免费插件，自动识别相机素材并匹配对应 LUT，一键把 Log 素材转换到正确的色彩空间。无订阅无水印，用于快速粗调。",
+      "license": "free",
+      "price": "免费",
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "officialHome": "https://colourlab.ai/freelab/",
+      "officialDownload": "https://colourlab.ai/freelab/",
+      "downloadVerified": true,
+      "sources": [
+        "https://colourlab.ai/freelab/"
+      ],
+      "lastVerified": "2026-10-22",
+      "installationGuide": "官网下载 Freelab 安装包，在 Resolve OpenFX 面板调用。",
+      "knownIssues": [
+        "免费版功能精简，完整 AI 匹配需 Colourlab AI 订阅"
+      ],
+      "compatibility": [
+        {
+          "host": "davinci-resolve",
+          "officialSupport": "supported",
+          "studioOnly": true,
+          "evidenceLevel": "official-docs",
+          "notes": "官方说明在 Resolve 中实时运行"
         },
         {
           "host": "jianying-pro",
